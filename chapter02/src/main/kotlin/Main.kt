@@ -1,3 +1,5 @@
+import kotlin.math.*
+
 fun main() {
 
     // This is a comment. It is not executed.
@@ -28,6 +30,13 @@ fun main() {
 //    println("%.0f".format(28.0 % 10.0))
 
     // Shift Operations
-    println(1 shl 3)
-    println(32 shr 2)
+//    println(1 shl 3)
+//    println(32 shr 2)
+
+    // Math Functions
+    println(sin(45 * PI / 180))
+    // 0.7071067811865475
+
+    println(cos(135 * PI / 180))
+    // -0.7071067811865475
 }
