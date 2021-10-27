@@ -94,10 +94,74 @@ fun main() {
 //    val evenOdd = testNumber % 2
 //    println(evenOdd)
 
+//    // 4.
+//    var answer = 0
+//    answer += 1
+//    answer += 10
+//    answer *= 10
+//    println(answer shr 3)
+
+    // Challenges
+    // 1.
+    val exercise = 9
+    var exerciseSolve = 0
+    exerciseSolve += 1
+
+    // 2.
+    var age = 16
+    println(age)
+    age = 30
+    println(age)
+    // using var, because value in variable can change
+    exerciseSolve += 1
+
+    // 3.
+    val a: Int = 46
+    val b: Int = 10
+
+    val answer1: Int = (a * 100) + b
+    val answer2: Int = (a * 100) + (b * 100)
+    val answer3: Int = (a * 100) + (b / 10)
+
+    println(answer1)
+    println(answer2)
+    println(answer3)
+    exerciseSolve += 1
+
     // 4.
-    var answer = 0
-    answer += 1
-    answer += 10
-    answer *= 10
-    println(answer shr 3)
+    println(5 * 3 - 4 / 2 * 2)
+    println((5 * 3) - ((4 / 2) * 2))
+    exerciseSolve += 1
+
+    // 5.
+    val valueA: Double = 3.0
+    val valueB: Double = 5.0
+    val average: Double = valueA / valueB
+    println(average)
+    exerciseSolve += 1
+
+    // 6.
+    val fahrenheit: Double = 50.0
+    val celsius: Double = (fahrenheit - 32) / 1.8
+    println(celsius)
+    exerciseSolve += 1
+
+    // 7.
+    val position = 45
+    val row = if (position % 8 == 0) 8 else position % 8
+    val column = if (position % 8 == 0) (position / 8) else (position / 8) + 1
+    println("row: $row, column: $column")
+    exerciseSolve += 1
+
+    // 8.
+    val degrees: Double = 360.0
+    val radians = degrees * PI / 180.0
+    println(radians)
+    exerciseSolve += 1
+
+    // 9.
+    exerciseSolve += 1
+
+    println("Exercise total: $exercise, Solve: $exerciseSolve")
+
 }
