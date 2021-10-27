@@ -39,4 +39,10 @@ fun main() {
 
     println(cos(135 * PI / 180))
     // -0.7071067811865475
+
+    println(sqrt(2.0))
+
+    println(max(5, 10))
+
+    println(min(-3, -15))
 }
