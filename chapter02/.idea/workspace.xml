@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b005793b-f0b4-4dae-9cb9-84d14f6a8e13" name="Changes" comment="chapter02 - mini-exercises">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
-    </list>
+    <list default="true" id="b005793b-f0b4-4dae-9cb9-84d14f6a8e13" name="Changes" comment="chapter02 - solve all exercises" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,7 +56,7 @@
       <workItem from="1635266278268" duration="632000" />
       <workItem from="1635267058753" duration="1194000" />
       <workItem from="1635300688032" duration="2092000" />
-      <workItem from="1635305065324" duration="6064000" />
+      <workItem from="1635305065324" duration="6278000" />
     </task>
     <task id="LOCAL-00001" summary="chapter02 - shift operations">
       <created>1635267778775</created>
@@ -89,7 +86,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635302516046</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="chapter02 - solve all exercises">
+      <created>1635313040131</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1635313040131</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -112,6 +116,7 @@
     <MESSAGE value="chapter02 - math function" />
     <MESSAGE value="chapter02 - some math functions example" />
     <MESSAGE value="chapter02 - mini-exercises" />
-    <option name="LAST_COMMIT_MESSAGE" value="chapter02 - mini-exercises" />
+    <MESSAGE value="chapter02 - solve all exercises" />
+    <option name="LAST_COMMIT_MESSAGE" value="chapter02 - solve all exercises" />
   </component>
 </project>
