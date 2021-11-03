@@ -23,6 +23,19 @@ fun main() {
 //    val actuallyDouble = 3.toDouble()
 
     // Mini-Exercises
+    // 1.
+    val age1 = 42
+    val age2 = 21
+    // inferred by Int, yes
 
+    // 2.
+//    val avg1 = (age1 + age2) / 2
+//    // avg1 is Int, so don't bring exact value
 
+    // 3.
+    val avg1: Double = ((age1 + age2) / 2).toDouble()
+    println(avg1)
+
+    // Strings In Kotlin
+    // Characters And Strings
 }
