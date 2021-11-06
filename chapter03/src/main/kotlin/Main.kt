@@ -51,4 +51,10 @@ fun main() {
     message += exclamationMark
 //    println(message)
 
+    // String Templates
+    message = "Hello my name is $name!" // "Hello my name is Suyatna!"
+
+    val oneThird = 1.0 / 3.0
+    val oneThirdString = "One third is $oneThird as a decimal."
+    println(oneThirdString)
 }
