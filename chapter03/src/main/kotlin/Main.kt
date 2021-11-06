@@ -55,6 +55,17 @@ fun main() {
     message = "Hello my name is $name!" // "Hello my name is Suyatna!"
 
     val oneThird = 1.0 / 3.0
-    val oneThirdString = "One third is $oneThird as a decimal."
-    println(oneThirdString)
+    // val oneThirdString = "One third is $oneThird as a decimal."
+    val oneThirdString = "One third is ${1.0 / 3.0} as a decimal."
+//    println(oneThirdString)
+
+    // Multi-line Strings
+    val bigString = """
+        You can have string
+        that contains multiple
+        lines
+        by
+        doing this.
+    """.trimIndent()
+    println(bigString)
 }
