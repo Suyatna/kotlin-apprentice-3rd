@@ -67,5 +67,17 @@ fun main() {
         by
         doing this.
     """.trimIndent()
-    println(bigString)
+//    println(bigString)
+
+    // Mini-Exercises
+
+    // 1.
+    val fistName = "Suyatna"
+    val lastName = "Light"
+
+    // 2.
+    val fullName = "$fistName $lastName"
+
+    val myDetails = "Hello, my name is $fullName"
+    println(myDetails)
 }
