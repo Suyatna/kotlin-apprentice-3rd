@@ -79,5 +79,52 @@ fun main() {
     val fullName = "$fistName $lastName"
 
     val myDetails = "Hello, my name is $fullName"
-    println(myDetails)
+//    println(myDetails)
+
+    // Pairs and Triples
+    // Pair
+    val coordinates: Pair<Int, Int> = Pair(2, 3)
+//    val coordinatesInferred = Pair(2, 3)
+
+    // -More Concise
+    val coordinatesWithTo = 2 to 3
+    val coordinatesDoubles = Pair(2.1, 3.5) // Inferred to be of type Pair<Double, Double>
+
+    // -Mix and Match The Type Comprising
+    val coordinatesMixed = Pair(2.1, 3) // Inferred to be of type Pair<Double, Int>
+
+    // -Access Data Inside A Pair
+//    val x1 = coordinates.first // Equal 2
+//    val y1 = coordinates.second // Equal 3
+
+    // -Destructuring Declaration
+    val (x, y) = coordinates // x and y inferred to be of type Int
+
+    // -Access Data Inside A Triples
+    val coordinates3D = Triple(2, 3, 1)
+    val (x3, y3, z3) = coordinates3D
+
+    // -Ignore Certain Element
+    val (x4, y4, _) = coordinates3D // _ means ignoring part
+
+    // Mini-Exercises
+
+    // 1.
+    val dateExample = Triple(9, 22, 1997)
+
+    // 2.
+    val month = dateExample.first
+    val day = dateExample.second
+    val year = dateExample.third
+
+    // 3.
+    val (monthCon, _, yearCon) = dateExample
+
+    // 4.
+    var (monthEdit, dayEdit, yearEdit) = dateExample
+    monthEdit = 11
+
+    val newDateExample = Pair(monthEdit, yearEdit)
+    println(newDateExample)
+
 }
