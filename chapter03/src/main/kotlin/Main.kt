@@ -155,4 +155,16 @@ fun main() {
 
         }
     }
+
+    // Challenges
+    // 1.
+    val coordinates = Pair(2, 3)
+
+    // 2.
+    val (row, column) = coordinates
+
+
+    // 3.
+    val character: Char = 'd'
+    val string: String = "dog"
 }
