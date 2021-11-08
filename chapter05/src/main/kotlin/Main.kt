@@ -1,5 +1,5 @@
-fun main(args: Array<String>) {
+fun main() {
     // Ranges
     val closedRange = 0..5
-    println(closedRange~)
+    println(closedRange)
 }
