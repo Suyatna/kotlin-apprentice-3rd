@@ -1,22 +1,21 @@
 fun main() {
     // Ranges
     // Closed Range
-    val closedRange = 0..5
-    println(closedRange)
+//    val closedRange = 0..5
+//    println(closedRange)
 
     // Half-Open Range
-    val halfOpenRange = 0 until 5
+//    val halfOpenRange = 0 until 5
 //    println(halfOpenRange)
 
     // Decreasing Range
-    val decreasingRange = 5 downTo 0
+//    val decreasingRange = 5 downTo 0
 //    println(decreasingRange)
 
     // For Loops
-    val count = 10
+//    val count = 10
 
-    var sum = 0
-//    for (i in 1..count) {
+    //    for (i in 1..count) {
 //        sum += i
 //        print("$sum ")
 //    }
@@ -47,5 +46,17 @@ fun main() {
 //    }
 
     // Labeled Statements
+    var sum = 0
+    rowLoop@ for (row in 0 until 8) {
 
+        println()
+        columnLoop@ for (column in 0 until 8) {
+            if (row == column) {
+                continue@rowLoop
+            }
+            sum += row * column
+
+            print("$sum ")
+        }
+    }
 }
