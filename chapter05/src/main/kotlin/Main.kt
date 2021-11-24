@@ -22,14 +22,30 @@ fun main() {
 //    }
 
     // Repeat Loops
-    sum = 1
-    var lastSum = 0
-    repeat(10) {
-        val temp = sum
-        sum += lastSum
-        print("sum: $sum ")
-        lastSum = temp
-        print("lastSum: $lastSum ")
-        println()
-    }
+//    sum = 1
+//    var lastSum = 0
+//    repeat(10) {
+//        val temp = sum
+//        sum += lastSum
+//        print("sum: $sum ")
+//        lastSum = temp
+//        print("lastSum: $lastSum ")
+//        println()
+//    }
+
+    // Steps In Loops
+//    sum = 0
+//    for (i in 1..count step 2) {
+//        sum += i
+//        println(sum)
+//    }
+
+//    sum = 0
+//    for (i in count downTo 1 step 2) {
+//        sum += i
+//        println(sum)
+//    }
+
+    // Labeled Statements
+
 }
