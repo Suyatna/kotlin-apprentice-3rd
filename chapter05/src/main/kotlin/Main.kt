@@ -46,7 +46,7 @@ fun main() {
 //    }
 
     // Labeled Statements
-    var sum = 0
+//    var sum = 0
 //    rowLoop@ for (row in 0 until 8) {
 //
 //        println()
@@ -70,16 +70,55 @@ fun main() {
     // 2. done
 
     // 3.
-    sum = 0
-    for (row in 1 until 8 step 2) {
-//        if (row % 2 == 0) {
-//            continue
+//    sum = 0
+//    for (row in 1 until 8 step 2) {
+////        if (row % 2 == 0) {
+////            continue
+////        }
+//
+//        for (column in 0 until 8) {
+//            sum += row * column
 //        }
+//
+//        println(sum)
+//    }
 
-        for (column in 0 until 8) {
-            sum += row * column
-        }
-
-        println(sum)
+    // When Expression
+    val number = 10
+    when (number) {
+        0 -> println("zero")
+        else -> println("non-zero")
     }
+
+    // Returning Values
+    val numberName = when (number) {
+        2 -> "two"
+        4 -> "four"
+        6 -> "six"
+        8 -> "eight"
+        10 -> "ten"
+        else -> {
+            println("unknown number")
+            "unknown"
+        }
+    }
+
+    println(numberName)
+
+    // Advanced When Expression
+    val hourOfDay = 12
+    val timeOfDay: String
+
+    timeOfDay = when (hourOfDay) {
+        in 0..5 -> "early morning"
+        in 6..11 -> "morning"
+        in 12..16 -> "afternoon"
+        in 17..19 -> "evening"
+        in 20..23 -> "late evening"
+        else -> {
+            "invalid hour"
+        }
+    }
+
+    println(timeOfDay)
 }
