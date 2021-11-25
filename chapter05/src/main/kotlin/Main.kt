@@ -46,17 +46,27 @@ fun main() {
 //    }
 
     // Labeled Statements
-    var sum = 0
-    rowLoop@ for (row in 0 until 8) {
+//    var sum = 0
+//    rowLoop@ for (row in 0 until 8) {
+//
+//        println()
+//        columnLoop@ for (column in 0 until 8) {
+//            if (row == column) {
+//                continue@rowLoop
+//            }
+//            sum += row * column
+//
+//            print("$sum ")
+//        }
+//    }
 
-        println()
-        columnLoop@ for (column in 0 until 8) {
-            if (row == column) {
-                continue@rowLoop
-            }
-            sum += row * column
-
-            print("$sum ")
-        }
+    // Mini-Exercises
+    // 1.
+    val range = 1..10
+    for (i in range) {
+        println("$i^2 = ${i * i}")
     }
+
+    // 2.
+
 }
