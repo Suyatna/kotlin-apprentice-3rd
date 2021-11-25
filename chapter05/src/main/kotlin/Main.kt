@@ -46,7 +46,7 @@ fun main() {
 //    }
 
     // Labeled Statements
-//    var sum = 0
+    var sum = 0
 //    rowLoop@ for (row in 0 until 8) {
 //
 //        println()
@@ -62,11 +62,24 @@ fun main() {
 
     // Mini-Exercises
     // 1.
-    val range = 1..10
-    for (i in range) {
-        println("$i^2 = ${i * i}")
+//    val range = 1..10
+//    for (i in range) {
+//        println("$i^2 = ${i * i}")
+//    }
+
+    // 2. done
+
+    // 3.
+    sum = 0
+    for (row in 1 until 8 step 2) {
+//        if (row % 2 == 0) {
+//            continue
+//        }
+
+        for (column in 0 until 8) {
+            sum += row * column
+        }
+
+        println(sum)
     }
-
-    // 2.
-
 }
