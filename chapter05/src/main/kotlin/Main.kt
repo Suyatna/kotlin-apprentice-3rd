@@ -161,10 +161,11 @@ fun main() {
         print("$sum ")
     }
     println()
+    println()
 
     // 2. how many instance of "a" = 10
     var aLotOfAs = ""
-    println("count: $aLotOfAs.count()")
+    println("count: ${aLotOfAs.count()}")
 
     while (aLotOfAs.length < 10) {
         aLotOfAs += "a"
@@ -189,5 +190,22 @@ fun main() {
     println()
 
     // 4. a closed range can never be empty. why?
-    //
+    // because should contain range
+
+    // 5. print a countdown from 10 to 0 without using downTo
+    sum = 10
+    while (sum >= 0) {
+        print("$sum ")
+
+        sum -= 1
+    }
+    println()
+
+    // 6. print 0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0
+    var decimalIncrease = 0.0
+    while (decimalIncrease <= 1.0) {
+        print("${decimalIncrease.toFloat()} ")
+
+        decimalIncrease += 0.1
+    }
 }
