@@ -151,4 +151,23 @@ fun main() {
     }
 
     println("$name is $lifeStage")
+    println()
+
+    // challenges
+    // 1. how many iteration = 6
+    var sum = 0
+    for (i in 0..5) {
+        sum += i
+        print("$sum ")
+    }
+    println()
+
+    // 2. how many instance of "a"
+    var aLotOfAs = ""
+    println(aLotOfAs.count())
+
+    while (aLotOfAs.length < 10) {
+        aLotOfAs += "a"
+        println(aLotOfAs)
+    }
 }
