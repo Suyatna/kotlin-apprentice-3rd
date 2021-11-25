@@ -121,4 +121,34 @@ fun main() {
     }
 
     println(timeOfDay)
+
+    // Mini-Exercises
+    // 1.
+    var lifeStage = when (24) {
+        in 0..2 -> "infant"
+        in 3..12 -> "child"
+        in 13..19 -> "teenager"
+        in 20..39 -> "adult"
+        in 40..60 -> "middle aged"
+        else -> {
+            "elderly"
+        }
+    }
+
+    println(lifeStage)
+
+    // 2.
+    val (name, age) = Pair("suyatna", 24)
+    lifeStage = when (age) {
+        in 0..2 -> "an infant"
+        in 3..12 -> "a child"
+        in 13..19 -> "a teenager"
+        in 20..39 -> "an adult"
+        in 40..60 -> "a middle aged"
+        else -> {
+            "elderly"
+        }
+    }
+
+    println("$name is $lifeStage")
 }
