@@ -84,74 +84,74 @@ fun main() {
 //    }
 
     // When Expression
-    val number = 10
-    when (number) {
-        0 -> println("zero")
-        else -> println("non-zero")
-    }
+//    val number = 10
+//    when (number) {
+//        0 -> println("zero")
+//        else -> println("non-zero")
+//    }
 
     // Returning Values
-    val numberName = when (number) {
-        2 -> "two"
-        4 -> "four"
-        6 -> "six"
-        8 -> "eight"
-        10 -> "ten"
-        else -> {
-            println("unknown number")
-            "unknown"
-        }
-    }
-
-    println(numberName)
+//    val numberName = when (number) {
+//        2 -> "two"
+//        4 -> "four"
+//        6 -> "six"
+//        8 -> "eight"
+//        10 -> "ten"
+//        else -> {
+//            println("unknown number")
+//            "unknown"
+//        }
+//    }
+//
+//    println(numberName)
 
     // Advanced When Expression
-    val hourOfDay = 12
-    val timeOfDay: String
-
-    timeOfDay = when (hourOfDay) {
-        in 0..5 -> "early morning"
-        in 6..11 -> "morning"
-        in 12..16 -> "afternoon"
-        in 17..19 -> "evening"
-        in 20..23 -> "late evening"
-        else -> {
-            "invalid hour"
-        }
-    }
-
-    println(timeOfDay)
+//    val hourOfDay = 12
+//    val timeOfDay: String
+//
+//    timeOfDay = when (hourOfDay) {
+//        in 0..5 -> "early morning"
+//        in 6..11 -> "morning"
+//        in 12..16 -> "afternoon"
+//        in 17..19 -> "evening"
+//        in 20..23 -> "late evening"
+//        else -> {
+//            "invalid hour"
+//        }
+//    }
+//
+//    println(timeOfDay)
 
     // Mini-Exercises
-    // 1.
-    var lifeStage = when (24) {
-        in 0..2 -> "infant"
-        in 3..12 -> "child"
-        in 13..19 -> "teenager"
-        in 20..39 -> "adult"
-        in 40..60 -> "middle aged"
-        else -> {
-            "elderly"
-        }
-    }
-
-    println(lifeStage)
-
-    // 2.
-    val (name, age) = Pair("suyatna", 24)
-    lifeStage = when (age) {
-        in 0..2 -> "an infant"
-        in 3..12 -> "a child"
-        in 13..19 -> "a teenager"
-        in 20..39 -> "an adult"
-        in 40..60 -> "a middle aged"
-        else -> {
-            "elderly"
-        }
-    }
-
-    println("$name is $lifeStage")
-    println()
+//    // 1.
+//    var lifeStage = when (24) {
+//        in 0..2 -> "infant"
+//        in 3..12 -> "child"
+//        in 13..19 -> "teenager"
+//        in 20..39 -> "adult"
+//        in 40..60 -> "middle aged"
+//        else -> {
+//            "elderly"
+//        }
+//    }
+//
+//    println(lifeStage)
+//
+//    // 2.
+//    val (name, age) = Pair("suyatna", 24)
+//    lifeStage = when (age) {
+//        in 0..2 -> "an infant"
+//        in 3..12 -> "a child"
+//        in 13..19 -> "a teenager"
+//        in 20..39 -> "an adult"
+//        in 40..60 -> "a middle aged"
+//        else -> {
+//            "elderly"
+//        }
+//    }
+//
+//    println("$name is $lifeStage")
+//    println()
 
     // challenges
     // 1. how many iteration = 6
@@ -162,12 +162,32 @@ fun main() {
     }
     println()
 
-    // 2. how many instance of "a"
+    // 2. how many instance of "a" = 10
     var aLotOfAs = ""
-    println(aLotOfAs.count())
+    println("count: $aLotOfAs.count()")
 
     while (aLotOfAs.length < 10) {
         aLotOfAs += "a"
-        println(aLotOfAs)
     }
+    println(aLotOfAs)
+    println()
+
+    // 3.
+//    val (x, y, z) = Triple(1, 5, 0) // on the x/y plane
+//    val (x, y, z) = Triple(2, 2, 2) // x = y = z
+//    val (x, y, z) = Triple(3, 0, 1) // on the x/z plane
+//    val (x, y, z) = Triple(3, 2, 5) // nothing special
+    val (x, y, z) = Triple(0, 2, 4) // on the y/z plane
+
+    when {
+        x == y && y == z -> println("x = y = z")
+        z == 0 -> println("on the x/y plane")
+        y == 0 -> println("on the x/z plane")
+        x == 0 -> println("on the y/z plane")
+        else -> println("nothing special")
+    }
+    println()
+
+    // 4. a closed range can never be empty. why?
+    //
 }
