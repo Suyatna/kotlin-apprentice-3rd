@@ -12,6 +12,8 @@ fun main() {
     println("quotient: $quotient")
 
     println("fun inferred: ${multiplyInferred(3, 3)}")
+
+    incrementAndPrint(8)
 }
 
 // function basic
@@ -40,3 +42,10 @@ fun multiplyAndDivide(number: Int, factor: Int): Pair<Int, Int> {
 
 // function expression
 fun multiplyInferred(number: Int, multiplier: Int) = number * multiplier
+
+// parameters as values
+fun incrementAndPrint(value: Int): Int {
+    val newValue = value + 1
+    println(newValue)
+    return newValue
+}
