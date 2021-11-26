@@ -14,6 +14,11 @@ fun main() {
     println("fun inferred: ${multiplyInferred(3, 3)}")
 
     incrementAndPrint(8)
+    println()
+
+    println("overloading")
+    println(getValue(118))
+    println(getValue("90 (text)"))
 }
 
 // function basic
@@ -48,4 +53,13 @@ fun incrementAndPrint(value: Int): Int {
     val newValue = value + 1
     println(newValue)
     return newValue
+}
+
+// overloading
+fun getValue(value: Int): Int {
+    return value + 1
+}
+
+fun getValue(value: String): String {
+    return "the value is $value"
 }
