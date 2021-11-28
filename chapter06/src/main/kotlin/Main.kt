@@ -19,6 +19,10 @@ fun main() {
     println("overloading")
     println(getValue(118))
     println(getValue("90 (text)"))
+    println()
+
+    // 2.
+    printFullName("Suyatna", "Light")
 }
 
 // function basic
@@ -62,4 +66,16 @@ fun getValue(value: Int): Int {
 
 fun getValue(value: String): String {
     return "the value is $value"
+}
+
+// Mini-Exercises
+// 1.
+fun printFullName(firstName: String, lastName: String) {
+    println("$firstName  $lastName")
+}
+
+// 3.
+// 4.
+fun calculateFullName(fullName: String, lengthName: Int): Pair<String, Int> {
+    return Pair(fullName, fullName.length)
 }
