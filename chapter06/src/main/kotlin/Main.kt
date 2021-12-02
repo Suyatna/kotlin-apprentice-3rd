@@ -23,6 +23,10 @@ fun main() {
 
     // 2.
     printFullName("Suyatna", "Light")
+    println()
+
+    println(function(4, 2))
+    printResult(::add, 4, 2)
 }
 
 // function basic
@@ -78,4 +82,16 @@ fun printFullName(firstName: String, lastName: String) {
 // 4.
 fun calculateFullName(fullName: String, lengthName: Int): Pair<String, Int> {
     return Pair(fullName, fullName.length)
+}
+
+// Functions As Variables
+fun add(a: Int, b:Int): Int {
+    return a + b
+}
+
+var function = ::add
+
+fun printResult(function: (Int, Int) -> Int, a: Int, b: Int) {
+    val result = function(a, b)
+    print(result)
 }
