@@ -27,6 +27,8 @@ fun main() {
 
     println(function(4, 2))
     printResult(::add, 4, 2)
+
+    infiniteLoop()
 }
 
 // function basic
@@ -94,4 +96,11 @@ var function = ::add
 fun printResult(function: (Int, Int) -> Int, a: Int, b: Int) {
     val result = function(a, b)
     print(result)
+}
+
+// The Land Of No Return
+fun infiniteLoop(): Nothing {
+    while (true) {
+
+    }
 }
