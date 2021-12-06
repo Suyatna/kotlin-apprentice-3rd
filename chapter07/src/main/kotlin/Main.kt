@@ -31,14 +31,14 @@ fun main() {
 //    // Compiler Warning 'ALWAYS_NULL' Options
 
     // Smart Cast
-//    var nonNullableAuthor: String
-//    var nullableAuthor: String?
-//
-//    if (authorName != null) {
-//        nonNullableAuthor = authorName
-//    } else {
-//        nullableAuthor = authorName
-//    }
+    var nonNullableAuthor: String
+    var nullableAuthor: String?
+
+    if (authorName != null) {
+        nonNullableAuthor = authorName
+    } else {
+        nullableAuthor = authorName
+    }
 
     // Mini-Exercises 2
     // 1.
@@ -49,7 +49,7 @@ fun main() {
     }
     println()
 
-    // 2.
+    // 2. Using Smart Cast
     if (myFavoriteSong != null) {
         myFavoriteSong = null
         println("Now I have a favorite song is $myFavoriteSong")
@@ -62,4 +62,16 @@ fun main() {
     // Safe Calls
     var nameLength = authorName?.length
     println("Author's name has length $nameLength")
+    println()
+
+    // The let() Function
+    authorName?.let {
+        nonNullableAuthor = authorName
+        println(nonNullableAuthor)
+    }
+
+    authorName?.let {
+        nameLength = authorName.length
+        println(nameLength)
+    }
 }
