@@ -57,4 +57,9 @@ fun main() {
         myFavoriteSong = "You're my world"
         println("Now I have a favorite song is $myFavoriteSong")
     }
+    println()
+
+    // Safe Calls
+    var nameLength = authorName?.length
+    println("Author's name has length $nameLength")
 }
