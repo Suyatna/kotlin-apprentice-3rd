@@ -74,4 +74,11 @@ fun main() {
         nameLength = authorName.length
         println(nameLength)
     }
+    println()
+
+    // Elvis Operator
+    var nullableInt: Int? = 10
+    var mustHaveResult = nullableInt ?: 0 // if (nullableInt != null) nullableInt else 0
+    println(mustHaveResult)
+    println()
 }
