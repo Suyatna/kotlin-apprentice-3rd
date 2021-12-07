@@ -26,4 +26,14 @@ fun main(args: Array<String>) {
     // val otherOddNumbers = arrayOf(1, 3, 5, 7).toIntArray()
 
     // Arguments To main()
+//    for (arg in args) {
+//        println(arg)
+//    }
+
+    args.forEach { arg ->
+        println(arg)
+    }
+    println()
+
+
 }
