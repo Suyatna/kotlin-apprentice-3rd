@@ -6,6 +6,7 @@ fun main(args: Array<String>) {
     println("Program arguments: ${args.joinToString()}")
     println()
 
+    // Array
     // Creating Arrays
     // val evenNumber = arrayOf(2, 4, 6, 8)
 
@@ -35,5 +36,28 @@ fun main(args: Array<String>) {
     }
     println()
 
+    // List
+    // Creating Lists
+    // val innerPlanets = listOf("Mercury", "Venus", "Earth", "Mars")
+    // val innerPlanetsArrayList = arrayListOf("Mercury", "Venus", "Earth", "Mars")
 
+    // An empty list
+    // val subscribers: List<String> = listOf()
+
+    // Put the type argument on the function
+    // val subscribers = listOf<String>()
+
+    // Mutable Lists
+    val outerPlanets = mutableListOf("Jupiter", "Saturn", "Uranus", "Neptune")
+    val exoPlanets = mutableListOf<String>()
+    exoPlanets.add("SigmaX")
+
+    for (outerPlanet in outerPlanets) {
+        print("$outerPlanet, ")
+    }
+    println()
+
+    for (exoPlanet in exoPlanets) {
+        print("$exoPlanet, ")
+    }
 }
