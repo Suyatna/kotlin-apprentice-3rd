@@ -81,4 +81,17 @@ fun main(args: Array<String>) {
 
     val minPlayer = players.minOrNull()
     println("$minPlayer will start")
+    println()
+
+    // Using Indexing
+    val firstPlayer = players[0]
+    println("First player is $firstPlayer")
+
+    val secondPlayer = players.get(1)
+    println("Second player is $secondPlayer")
+
+    // Using Range To Slice
+    val upcomingPlayerSlice = players.slice(1..2)
+    println("${upcomingPlayerSlice.joinToString()}")
+    println()
 }
