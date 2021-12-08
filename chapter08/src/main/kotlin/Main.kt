@@ -60,4 +60,25 @@ fun main(args: Array<String>) {
     for (exoPlanet in exoPlanets) {
         print("$exoPlanet, ")
     }
+    println()
+    println()
+
+    // Using Properties And Methods
+    val players = mutableListOf("Alice", "Bob", "Cindy", "Dan")
+    println(players.isEmpty())
+    println()
+
+    if (players.size < 2) {
+        println("We need at least two players!")
+    } else {
+        println("Let's start!")
+    }
+
+    var currentPlayer = players.first()
+    println(currentPlayer)
+    println(players.last())
+    println()
+
+    val minPlayer = players.minOrNull()
+    println("$minPlayer will start")
 }
