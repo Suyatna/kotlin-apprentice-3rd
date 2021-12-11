@@ -87,11 +87,27 @@ fun main(args: Array<String>) {
     val firstPlayer = players[0]
     println("First player is $firstPlayer")
 
-    val secondPlayer = players.get(1)
-    println("Second player is $secondPlayer")
+//    val secondPlayer = players.get(1)
+//    println("Second player is $secondPlayer")
 
     // Using Range To Slice
     val upcomingPlayerSlice = players.slice(1..2)
     println("${upcomingPlayerSlice.joinToString()}")
     println()
+
+    println(isEliminated("Bob"))
+    println(players.slice(1..3).contains("Alice")) // false
+    println()
+
+    // Modifying List
+    // Appending Elements
+    players.add("Eli")
+    players += "Gina"
+    println(players.joinToString())
+}
+
+val players = mutableListOf("Alice", "Bob", "Cindy", "Dan")
+// Checking For An Element
+fun isEliminated(player: String): Boolean {
+    return player !in players
 }
