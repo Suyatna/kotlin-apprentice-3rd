@@ -104,6 +104,28 @@ fun main(args: Array<String>) {
     players.add("Eli")
     players += "Gina"
     println(players.joinToString())
+    println()
+
+    // Inserting Elements
+    players.add(5, "Frank")
+
+    // Removing Elements
+    val wasPlayerRemoved = players.remove("Gina")
+    println("It was $wasPlayerRemoved that Gine was removed")
+
+    val removedPlayer = players.removeAt(2)
+    println("$removedPlayer was removed")
+    println(players.indexOf("Dan"))
+
+    // Updating Elements
+    println(players.joinToString())
+    players[4] = "Franklin"
+    println(players.joinToString())
+    println()
+
+    players[3] = "Anna"
+    players.sort()
+    println(players.joinToString())
 }
 
 val players = mutableListOf("Alice", "Bob", "Cindy", "Dan")
