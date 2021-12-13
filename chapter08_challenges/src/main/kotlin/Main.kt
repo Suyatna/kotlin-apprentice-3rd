@@ -1,3 +1,5 @@
+@file:Suppress("NAME_SHADOWING")
+
 import java.util.Random
 
 fun main() {
@@ -98,4 +100,33 @@ fun main() {
     for (i in 0..50) {
         print("${rand(0, arrayOrdered.size)} ")
     }
+    println()
+    println()
+
+    // 6. write a function that calculate the minimum and maximum value in an array of integers.
+    // calculate these values yourself;don't use the methods min and max.
+    // return null if the given array is empty.
+    // hint: you can use the Int.MIN_VALUE and Int.MAX_VALUE constant within the function.
+    fun minMax(numbers: Array<Int>): Pair<Int, Int>? {
+        if (numbers.isEmpty()) return null
+
+        var min = Int.MAX_VALUE
+        var max = Int.MIN_VALUE
+
+        for (number in numbers) {
+            if (number < min) {
+                min = number
+            }
+            if (number > max) {
+                max = number
+            }
+        }
+
+        return Pair(min, max)
+    }
+
+    val integers = arrayOf(4, -54, -300, 23, 55666, 22, 1, -2223, 33, 11, 500_000)
+    val minMax = minMax(integers)
+    println(minMax?.first)
+    println(minMax?.second)
 }
