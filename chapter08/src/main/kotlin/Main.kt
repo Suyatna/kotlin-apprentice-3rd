@@ -126,10 +126,29 @@ fun main(args: Array<String>) {
     players[3] = "Anna"
     players.sort()
     println(players.joinToString())
+    println()
+
+    // Iterating Through A List
+    val scores = listOf(2, 2, 8, 6, 1)
+    for ((index, player) in players.withIndex()) {
+        println("${index + 1}. $player = ${scores[index]}")
+    }
+    println()
+
+    println(sumOfElements(scores))
 }
 
 val players = mutableListOf("Alice", "Bob", "Cindy", "Dan")
 // Checking For An Element
 fun isEliminated(player: String): Boolean {
     return player !in players
+}
+
+fun sumOfElements(list: List<Int>): Int {
+    var sum = 0
+    for (number in list) {
+        sum += number
+    }
+
+    return sum
 }
