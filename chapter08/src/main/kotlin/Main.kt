@@ -1,3 +1,5 @@
+@file:Suppress("KotlinConstantConditions")
+
 fun main(args: Array<String>) {
     println("Hello World!")
 
@@ -74,7 +76,7 @@ fun main(args: Array<String>) {
         println("Let's start!")
     }
 
-    var currentPlayer = players.first()
+    val currentPlayer = players.first()
     println(currentPlayer)
     println(players.last())
     println()
@@ -92,7 +94,7 @@ fun main(args: Array<String>) {
 
     // Using Range To Slice
     val upcomingPlayerSlice = players.slice(1..2)
-    println("${upcomingPlayerSlice.joinToString()}")
+    println(upcomingPlayerSlice.joinToString())
     println()
 
     println(isEliminated("Bob"))
@@ -133,9 +135,16 @@ fun main(args: Array<String>) {
     for ((index, player) in players.withIndex()) {
         println("${index + 1}. $player = ${scores[index]}")
     }
+    println(sumOfElements(scores))
     println()
 
-    println(sumOfElements(scores))
+    // Nullability And Collection Types
+    val nullableList: List<Int>? // = listOf(1, 2, 3, 4)
+    nullableList = null
+    println(nullableList)
+
+    val listOfNullables: List<Int?> = listOf(1, 2, null, 4)
+    println(listOfNullables)
 }
 
 val players = mutableListOf("Alice", "Bob", "Cindy", "Dan")
