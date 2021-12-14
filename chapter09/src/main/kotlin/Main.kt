@@ -1,7 +1,10 @@
-fun main(args: Array<String>) {
-    println("Hello World!")
-
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
+fun main() {
+    // creating maps
+    val namesAndScores = mutableMapOf(
+        "Anna" to 8,
+        "Brian" to 2,
+        "Craig" to 8,
+        "Donna" to 6
+    )
+    println(namesAndScores)
 }
