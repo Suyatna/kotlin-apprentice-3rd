@@ -1,7 +1,17 @@
-fun main(args: Array<String>) {
-    println("Hello World!")
+fun main() {
+    // creating maps
+    val namesAndScores = mutableMapOf(
+        "Anna" to 2,
+        "Brian" to 2,
+        "Craig" to 8,
+        "Donna" to 6
+    )
+    println(namesAndScores)
 
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
+    // create a map with define its capacity
+    // var pairs = HashMap<String, Int>(20)
+
+    // accessing values
+    // using the index operator
+    println(namesAndScores["Anna"])
 }
