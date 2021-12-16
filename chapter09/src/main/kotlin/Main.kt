@@ -14,4 +14,9 @@ fun main() {
     // accessing values
     // using the index operator
     println(namesAndScores["Anna"])
+
+    // using properties and methods
+    // println(namesAndScores.get("Craig"))
+    println(namesAndScores.isEmpty())
+    println(namesAndScores.size)
 }
