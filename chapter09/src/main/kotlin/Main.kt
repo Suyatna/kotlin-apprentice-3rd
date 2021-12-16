@@ -31,4 +31,17 @@ fun main() {
     bobData["state"] = "CA"
     bobData["city"] = "San Francisco"
     println(bobData)
+    println()
+
+    // mini-exercise
+    fun playerAddress(players: MutableMap<String, String>): MutableMap<String, String?> {
+
+        return mutableMapOf(
+            "name" to players["name"],
+            "city" to players["city"],
+            "state" to players["state"]
+        )
+    }
+
+    println(playerAddress(bobData))
 }
