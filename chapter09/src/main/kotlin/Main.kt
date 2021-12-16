@@ -44,4 +44,17 @@ fun main() {
     }
 
     println(playerAddress(bobData))
+
+    // updating values
+    bobData["name"] = "Bobby" // Bob
+    bobData["profession"] = "Mailman"
+
+    val pair = "nickname" to "Bobby D"
+    bobData += pair
+    println(bobData)
+
+    // removing pairs
+    bobData.remove("city")
+    bobData.remove("state", "CA")
+    println(bobData)
 }
