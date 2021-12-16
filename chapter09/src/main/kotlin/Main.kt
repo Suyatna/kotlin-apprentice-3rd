@@ -57,4 +57,15 @@ fun main() {
     bobData.remove("city")
     bobData.remove("state", "CA")
     println(bobData)
+    println()
+
+    // iterating through maps
+    for ((player, score) in namesAndScores) {
+        println("$player - $score")
+    }
+    // iterate over just the keys
+    for (player in namesAndScores.keys) {
+        print("$player, ")
+    }
+    println()
 }
