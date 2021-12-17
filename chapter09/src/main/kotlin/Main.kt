@@ -68,7 +68,10 @@ fun main() {
         print("$player, ")
     }
     println()
+    println()
 
     // running time for map operations
-
+    println("some string".hashCode())
+    println(1.hashCode())
+    println(false.hashCode())
 }
