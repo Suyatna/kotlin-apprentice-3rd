@@ -44,11 +44,26 @@ fun main() {
         map2: Map<String, String>
     ): Map<String, String> {
 
-        return (map1.asSequence() + map2.asSequence())
-            .distinct()
-            .groupBy({ it.key }, { it.value })
-            .mapValues { (_, values) -> values.joinToString(",") }
+        val map3s: MutableMap<String, String> = mutableMapOf()
+        map3s.putAll(map1)
+        map3s.putAll(map2)
+        return map3s
     }
 
     println(mergeMaps(map5, americaStates))
+
+    // 4. declare a function occurrencesOfCharacters that calculates which characters occur in a string, as well
+    // as how often each of these characters occur. return the result as a map. this is the function signature:
+    fun occurrencesOfCharacters(text: String): Map<Char, Int> {
+        val map = mutableMapOf<Char, Int>()
+        for (i in text) {
+            val count = map.getOrDefault(i, defaultValue = 0)
+            map[i] = count + 1
+        }
+        return map
+    }
+    println(occurrencesOfCharacters("suyatna"))
+
+    // 5. write a function that returns true if all the values of a map are unique. use a set to test uniqueness.
+
 }
