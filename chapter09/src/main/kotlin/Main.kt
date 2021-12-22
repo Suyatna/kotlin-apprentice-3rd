@@ -84,5 +84,20 @@ fun main() {
     // create an empty set by calling a constructor
     // val hashSet = HashSet<Int>()
 
+    // set from arrays
+    val someArray = arrayOf(1, 2, 3, 1)
+    val someSet = mutableSetOf(*someArray)
+    println(someSet)
 
+    // accessing elements
+    println(someSet.contains(1))
+    // check for existence
+    println(4 in someSet)
+    // iterate through a set
+    for (number in someSet) {
+        println(number)
+    }
+    println()
+
+    // adding and removing elements
 }
