@@ -74,4 +74,15 @@ fun main() {
     println("some string".hashCode())
     println(1.hashCode())
     println(false.hashCode())
+    println()
+
+    // set
+    // creating sets
+    val names = setOf("Anna", "Brian", "Craig", "Anna")
+    println(names)
+
+    // create an empty set by calling a constructor
+    // val hashSet = HashSet<Int>()
+
+
 }
