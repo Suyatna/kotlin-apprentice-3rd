@@ -65,5 +65,24 @@ fun main() {
     println(occurrencesOfCharacters("suyatna"))
 
     // 5. write a function that returns true if all the values of a map are unique. use a set to test uniqueness.
+    fun isInvertible(map: Map<String, Int>) = map.values.toSet().size == map.values.size
+
+    val invertibleMap = mapOf("1" to 1, "2" to 2, "3" to 3)
+    println(isInvertible(invertibleMap))
+
+    val nonInvertibleMap = mapOf("1" to 3, "2" to 2, "3" to 3)
+    println(isInvertible(nonInvertibleMap))
+
+    // 6. given the map:
+    val nameTitleLookup: MutableMap<String, String?> = mutableMapOf(
+        "Mary" to "Engineer",
+        "Patrick" to "Intern",
+        "Ray" to "Hacker"
+    )
+
+    nameTitleLookup["Patrick"] = null
+    nameTitleLookup.remove("Ray")
+
+    println(nameTitleLookup)
 
 }
