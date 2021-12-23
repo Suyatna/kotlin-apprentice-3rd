@@ -32,4 +32,19 @@ fun main() {
         a + b
     }
     operateOnNumbers(4, 2, operation = addLambda)
+
+    fun addFunction(a: Int, b: Int) = a + b
+    operateOnNumbers(4, 2, operation = ::addFunction)
+
+    // define lambda inline
+    operateOnNumbers(4, 2, operation = { a: Int, b: Int ->
+        a + b
+    })
+
+    // simply lambda syntax and remove boilerplate, trailing lambda syntax
+    operateOnNumbers(4, 2) { a, b -> a + b }
+
+    // using + operator, the + operator is just an operator function plus() in the Int class
+    // that takes two arguments and returns one result
+    operateOnNumbers(4, 2, operation = Int::plus)
 }
