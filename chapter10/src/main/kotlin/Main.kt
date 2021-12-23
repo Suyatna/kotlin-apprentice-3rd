@@ -47,4 +47,19 @@ fun main() {
     // using + operator, the + operator is just an operator function plus() in the Int class
     // that takes two arguments and returns one result
     operateOnNumbers(4, 2, operation = Int::plus)
+    println()
+
+    // lambdas with no meaningful return value
+    val unitLambda: () -> Unit = {
+        println("kotlin apprentice is awesome!")
+    }
+    unitLambda()
+
+    // lambda not return a value, must use the Nothing type
+    val nothingLambda: () -> Nothing = {
+        throw NullPointerException()
+    }
+
+    // capturing from the enclosing scope
+
 }
