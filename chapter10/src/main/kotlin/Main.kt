@@ -59,7 +59,41 @@ fun main() {
     val nothingLambda: () -> Nothing = {
         throw NullPointerException()
     }
+    println()
 
     // capturing from the enclosing scope
+    var counter = 0
+    val incrementCounter = {
+        counter += 1
+    }
 
+    incrementCounter()
+    incrementCounter()
+    incrementCounter()
+    incrementCounter()
+    incrementCounter()
+
+    println(counter)
+    println()
+
+    fun countingLambda(): () -> Int {
+        var counter = 0
+        val incrementCounter: () -> Int = {
+            counter += 1
+            counter
+        }
+        return incrementCounter
+    }
+
+    val counter1 = countingLambda()
+    val counter2 = countingLambda()
+
+    println(counter1())
+    println(counter2())
+    println(counter1())
+    println(counter1())
+    println(counter2())
+    println()
+
+    // custom sorting with lambdas
 }
