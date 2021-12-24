@@ -96,4 +96,13 @@ fun main() {
     println()
 
     // custom sorting with lambdas
+    // call sorted() to get a sorted version of the array like so:
+    val names = arrayOf("ZZZZZZ", "BB", "AAA", "CCCC", "EEEEE")
+    println(names.sorted())
+
+    // specify a trailing lambda for compareBy() like so:
+    val namesByLength = names.sortedWith(compareBy {
+        -it.length
+    })
+    println(namesByLength)
 }
