@@ -52,4 +52,25 @@ fun main() {
     })
 
     println(resultFibonacci)
+    println()
+
+    // 3. functional ratings
+    // first, create a map called averageRatings which will contain a mapping of app name to average ratings
+    // use forEach to iterate through the appRatings map
+    // then, use reduce to calculate the average rating and store this rating in the averageRatings map
+    // finally, use filter and map chained together to get a list of the app names whose average rating is greater than 3
+    val appRatings = mapOf(
+        "Calendar Pro" to arrayOf(1, 5, 5, 4, 2, 1, 5, 4),
+        "The Messenger" to arrayOf(5, 4, 2, 5, 4, 1, 1, 2),
+        "Socialist" to arrayOf(2, 1, 2, 2, 1, 2, 4, 2)
+    )
+
+    val averageRatings: MutableMap<String, Double> = mutableMapOf()
+    appRatings.forEach {
+        averageRatings[it.key] = ((it.value.reduce { a, b ->
+            a + b
+        }).toDouble() / it.value.size)
+    }
+
+    println(averageRatings)
 }

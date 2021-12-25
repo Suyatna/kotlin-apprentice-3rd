@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d303c0f-bc4e-42a4-9e9b-3c6d8cf7a7a4" name="Changes" comment="chapter10_challenges - complete challenge 2" />
+    <list default="true" id="4d303c0f-bc4e-42a4-9e9b-3c6d8cf7a7a4" name="Changes" comment="chapter10_challenges - add workspace.xml">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,7 +61,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1640429413266</updated>
-      <workItem from="1640429424654" duration="8104000" />
+      <workItem from="1640429424654" duration="13054000" />
     </task>
     <task id="LOCAL-00001" summary="chapter10_challenges - initial commit">
       <created>1640429674023</created>
@@ -81,7 +84,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640438573579</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="chapter10_challenges - add workspace.xml">
+      <created>1640439640190</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1640439640190</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -102,6 +112,7 @@
     <MESSAGE value="chapter10_challenges - initial commit" />
     <MESSAGE value="chapter10_challenges - complete challenge 1" />
     <MESSAGE value="chapter10_challenges - complete challenge 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="chapter10_challenges - complete challenge 2" />
+    <MESSAGE value="chapter10_challenges - add workspace.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="chapter10_challenges - add workspace.xml" />
   </component>
 </project>
