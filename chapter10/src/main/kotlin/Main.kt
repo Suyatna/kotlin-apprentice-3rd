@@ -173,4 +173,50 @@ fun main() {
         stockSum += it.key * it.value
     }
     println(stockSum)
+
+    // mini-exercises
+    // 1.
+    val nameList = listOf(
+        "Suyatna",
+        "Light",
+        "Nat"
+    )
+
+    var concatenationNames = nameList.fold("") { a, b ->
+        "$a $b"
+    }
+    println(concatenationNames)
+
+    // 2.
+    var nameFilter = nameList.filter {
+        it.length > 4
+    }
+    concatenationNames = nameFilter.fold("") { a, b ->
+        "$a $b"
+    }
+    println(concatenationNames)
+
+    // 3.
+    val namesAndAges = mapOf(
+        "Suyatna" to 24,
+        "Wahyu" to 21,
+        "Tiara" to 17,
+        "Windy" to 13
+    )
+
+    var namesAndAgesFilter = namesAndAges.filter {
+        it.value < 18
+    }
+    println(namesAndAgesFilter)
+
+    // 4.
+    namesAndAgesFilter = namesAndAges.filter {
+        it.value > 18
+    }
+
+    var convertToList: List<String> = listOf()
+    namesAndAgesFilter.forEach {
+        convertToList += it.key
+    }
+    println(convertToList)
 }
