@@ -105,4 +105,72 @@ fun main() {
         -it.length
     })
     println(namesByLength)
+
+    // iterating over collections with lambdas
+    // operation forEach function
+    val values = listOf(1, 2, 3, 4, 5, 6)
+    values.forEach {
+        println("$it: ${it * it}")
+    }
+    println()
+
+    // function to filter out certain elements
+    val prices = listOf(1.5, 10.5, 4.99, 2.30, 8.19)
+    val largePrices = prices.filter {
+        it > 5.0
+    }
+    println(largePrices)
+
+    val salesPrices = prices.map {
+        it * 0.9
+    }
+    println(salesPrices)
+
+    prices.forEach {
+        print("${it * 0.9}, ")
+    }
+    println()
+    println("original: $prices")
+
+    // the map function can also be used to change the type
+    val userInput = listOf("0", "11", "haha", "42")
+    val numbers = userInput.map {
+        it.toIntOrNull()
+    }
+    println(numbers)
+
+    // if we want to filter out the invalid, null values
+    val numbers2 = userInput.mapNotNull {
+        it.toIntOrNull()
+    }
+    println(numbers2)
+    println()
+
+    // fold(), which takes a starting value and a lambda
+    // this could be used with the prices list to calculate the total
+    var sum = prices.fold(0.0) { a, b ->
+        a + b
+    }
+    println(sum)
+
+    // reduce is close related to fold(), reduce uses the first element in the collection as the starting value
+    sum = prices.reduce { a, b ->
+        a + b
+    }
+    println(sum)
+
+    // calculate the total value of our stock
+    val stock = mapOf(
+        1.5 to 5,
+        10.0 to 2,
+        4.99 to 20,
+        2.30 to 5,
+        8.19 to 30
+    )
+
+    var stockSum = 0.0
+    stock.forEach {
+        stockSum += it.key * it.value
+    }
+    println(stockSum)
 }
