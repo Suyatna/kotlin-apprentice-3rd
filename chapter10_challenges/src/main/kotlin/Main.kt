@@ -1,7 +1,13 @@
-fun main(args: Array<String>) {
-    println("Hello World!")
+fun main() {
+    // 1. repeating yourself
+    // write a function that will run a given lambda a given number of times
+    fun repeatTask(times: Int, task: () -> Unit) {
+        for (time in 0 until times) {
+            task()
+        }
+    }
 
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
+    repeatTask(10, task = { println("kotlin apprentice book is great!") })
+
+    // 2.
 }
