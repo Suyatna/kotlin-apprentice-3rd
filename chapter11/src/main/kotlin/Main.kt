@@ -36,7 +36,7 @@ fun main() {
     println()
 
     // create fake, impostor yatna
-    var imposters = (0..100).map {
+    val imposters = (0..100).map {
         Person(firstName = "Yatna", lastName = "Light")
     }
 
@@ -68,7 +68,31 @@ fun main() {
     }
 
     println(yatna.fullName)
+    println()
 
+    // mini-exercises
+    fun memberOf(person: Person, group: Array<Person>): Boolean {
+        return group.contains(person)
+    }
+
+    val groupWithJohn = arrayOf(
+        Person("A", "B"),
+        Person("C", "D"),
+        yatna,
+        Person("E", "F"),
+        Person("G", "H")
+    )
+
+    val groupWithoutJohn = arrayOf(
+        Person("A", "B"),
+        Person("C", "D"),
+        Person("E", "F"),
+        Person("G", "H"),
+        Person("I", "J")
+    )
+
+    println(memberOf(yatna, groupWithJohn)) // > true
+    println(memberOf(yatna, groupWithoutJohn)) // > false
 }
 
 // creating classes
