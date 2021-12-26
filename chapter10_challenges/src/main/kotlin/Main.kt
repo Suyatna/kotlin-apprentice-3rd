@@ -7,7 +7,9 @@ fun main() {
         }
     }
 
-    repeatTask(10, task = { println("kotlin apprentice book is great!") })
+    repeatTask(10) {
+        println("kotlin apprentice book is great!")
+    }
     println()
 
     // 2. lambda sums
@@ -15,44 +17,24 @@ fun main() {
     // use the function to find the sum of the 10 square numbers, which equals 385
     // then use the function to find the sum of the 10 Fibonacci numbers, which equals 143
     fun mathSum(length: Int, series: (Int) -> Int): Int {
-
-        return series(length)
+        var result = 0
+        for (i in 0 until length) {
+            result += series(i)
+        }
+        return result
     }
 
-    val squareNumbers = mathSum(10, series = { a: Int ->
-        var sum = 0
-        for (i in 1 until a + 1) {
-            sum += (i * i)
-        }
-        sum
-    })
+    println(mathSum(10) { it * it })
 
-    println(squareNumbers)
+    fun fibonacci(number: Int): Int {
+        if (number <= 0) return 0
 
-    fun fibonacci(numbers: Int): Int {
-        var sum = 0
-        for (i in 1 until numbers + 1) {
-            sum = when (i) {
-                1 -> 1
-                2 -> 1
-                else -> {
-                    fibonacci(numbers - 1) + fibonacci(numbers - 2)
-                }
-            }
-        }
-        return sum
+        if (number == 1 || number == 2) return 1
+
+        return fibonacci(number - 1) + fibonacci(number - 2)
     }
 
-    val resultFibonacci = mathSum(10, series = { a: Int ->
-        var total = 0
-        for (i in 1 until a + 1) {
-            total += fibonacci(i)
-        }
-        total
-    })
-
-    println(resultFibonacci)
-    println()
+    println(mathSum(10, ::fibonacci))
 
     // 3. functional ratings
     // first, create a map called averageRatings which will contain a mapping of app name to average ratings
@@ -65,12 +47,17 @@ fun main() {
         "Socialist" to arrayOf(2, 1, 2, 2, 1, 2, 4, 2)
     )
 
-    val averageRatings: MutableMap<String, Double> = mutableMapOf()
+    val averageRatings = mutableMapOf<String, Double>()
     appRatings.forEach {
-        averageRatings[it.key] = ((it.value.reduce { a, b ->
-            a + b
-        }).toDouble() / it.value.size)
+        val total = it.value.reduce(Int::plus)
+        averageRatings[it.key] = total.toDouble() / it.value.size
     }
-
     println(averageRatings)
+
+    val goodApps = averageRatings.filter {
+        it.value > 3
+    }.map {
+        it.key
+    }
+    println(goodApps)
 }
