@@ -18,7 +18,7 @@ fun main() {
     // then use the function to find the sum of the 10 Fibonacci numbers, which equals 143
     fun mathSum(length: Int, series: (Int) -> Int): Int {
         var result = 0
-        for (i in 0 until length + 1) {
+        for (i in 0..length) {
             result += series(i)
         }
         return result
