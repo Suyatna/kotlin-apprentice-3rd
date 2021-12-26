@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d303c0f-bc4e-42a4-9e9b-3c6d8cf7a7a4" name="Changes" comment="chapter10_challenges - fix major error logic">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
-    </list>
+    <list default="true" id="4d303c0f-bc4e-42a4-9e9b-3c6d8cf7a7a4" name="Changes" comment="chapter10_challenges - fix iteration mathSum" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -65,7 +62,7 @@
       <workItem from="1640429424654" duration="18309000" />
       <workItem from="1640483503496" duration="334000" />
       <workItem from="1640486348395" duration="1211000" />
-      <workItem from="1640487650643" duration="653000" />
+      <workItem from="1640487650643" duration="697000" />
     </task>
     <task id="LOCAL-00001" summary="chapter10_challenges - initial commit">
       <created>1640429674023</created>
@@ -116,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640487546683</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="chapter10_challenges - fix iteration mathSum">
+      <created>1640493269644</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1640493269644</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -141,6 +145,7 @@
     <MESSAGE value="chapter10_challenges - complete challenge 3, finish" />
     <MESSAGE value="chapter10_challenges - add change gradle.xml" />
     <MESSAGE value="chapter10_challenges - fix major error logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="chapter10_challenges - fix major error logic" />
+    <MESSAGE value="chapter10_challenges - fix iteration mathSum" />
+    <option name="LAST_COMMIT_MESSAGE" value="chapter10_challenges - fix iteration mathSum" />
   </component>
 </project>
