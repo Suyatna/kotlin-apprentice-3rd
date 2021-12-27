@@ -1,31 +1,34 @@
 fun main() {
-    val jane = Student(firstName = "Jane", lastName = "Appleseed")
-    val history = Grade(letter = "B", points = 9.0, credits = 3.0)
-    val math = Grade(letter = "A", points = 16.0, credits = 4.0)
+    val albert = Student(
+        firstName = "Albert",
+        lastName = "Einstein",
+        id = 1
+    )
+    val richard = Student(
+        firstName = "Richard",
+        lastName = "Feynman",
+        id = 2
+    )
+    val albertCopy = albert.copy()
 
-    jane.recordGrade(history)
-    jane.recordGrade(math)
-    println(jane.studentGrades)
-}
+    println(albert)
+    // > Student (firstName=Albert, lastName=Einstein, id=1)
+    println(richard)
+    // > Student (firstName=Richard, lastName=Feynman, id=2)
 
-// methods and mutability
-class Grade(
-    val letter: String,
-    val points: Double,
-    val credits: Double
-)
+    println(albert == richard) // > false
+    println(albert == albertCopy) // > true
+    println(albert === albertCopy) // > false
+    println()
 
-class Student(
-    val firstName: String,
-    val lastName: String,
-    private val grades: MutableList<Grade> = mutableListOf(),
-    private var credits: Double = 0.0
-) {
-    val studentGrades
-        get() = grades.sumOf { it.points } / grades.sumOf { it.credits }
+    val marie = StudentData("Marie", "Curie", id = 1)
+    val emmy = StudentData("Emmy", "Noether", id = 2)
+    val marieCopy = marie.copy()
 
-    fun recordGrade(grade: Grade) {
-        grades.add(grade)
-        credits += grade.credits
-    }
+    println(marie)
+    println(emmy)
+
+    println(marie == emmy)
+    println(marie == marieCopy)
+    println(marie === marieCopy)
 }

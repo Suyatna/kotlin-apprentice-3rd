@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d303c0f-bc4e-42a4-9e9b-3c6d8cf7a7a4" name="Changes" comment="chapter10_challenges - fix iteration mathSum" />
+    <list default="true" id="4d303c0f-bc4e-42a4-9e9b-3c6d8cf7a7a4" name="Changes" comment="chapter10_challenges - fix iteration mathSum">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,6 +65,7 @@
       <workItem from="1640483503496" duration="334000" />
       <workItem from="1640486348395" duration="1211000" />
       <workItem from="1640487650643" duration="697000" />
+      <workItem from="1640568685895" duration="1656000" />
     </task>
     <task id="LOCAL-00001" summary="chapter10_challenges - initial commit">
       <created>1640429674023</created>
