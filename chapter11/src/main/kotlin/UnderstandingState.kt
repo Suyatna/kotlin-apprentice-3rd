@@ -31,4 +31,11 @@ fun main() {
     println(marie == emmy)
     println(marie == marieCopy)
     println(marie === marieCopy)
+    println()
+
+    // destructing declaration
+    val (firstName, lastName, id) = marie
+    println(firstName)
+    println(lastName)
+    println(id)
 }
