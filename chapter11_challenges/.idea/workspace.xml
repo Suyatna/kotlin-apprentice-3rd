@@ -5,10 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9cfaea08-9d9d-4b4b-b1b3-eb5cf173a93a" name="Changes" comment="chapter11_challenges - complete challenge 1">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/MovieList.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/User.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chapter11_challenge01/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chapter11_challenge01/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chapter11_challenge01/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chapter11_challenge01/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chapter11_challenge01/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chapter11_challenge01/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chapter11_challenge01/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chapter11_challenge01/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chapter11_challenge01/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chapter11_challenge01/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chapter11_challenge01/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chapter11_challenge01/settings.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chapter11_challenge01/src/main/kotlin/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,20 +66,16 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
   <component name="RunManager">
-    <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+    <configuration name="MainKt" type="JetRunConfigurationType" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MainKt" />
       <module name="chapter11_challenges.main" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Kotlin.MainKt" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -78,8 +85,17 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1640602888740</updated>
-      <workItem from="1640602896813" duration="5830000" />
+      <workItem from="1640602896813" duration="6587000" />
+      <workItem from="1640663196013" duration="3692000" />
     </task>
+    <task id="LOCAL-00001" summary="chapter11_challenges - complete challenge 1">
+      <created>1640612415756</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1640612415756</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -100,5 +116,9 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="chapter11_challenges - complete challenge 1" />
     <option name="LAST_COMMIT_MESSAGE" value="chapter11_challenges - complete challenge 1" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
