@@ -1,7 +1,11 @@
-fun main(args: Array<String>) {
-    println("Hello World!")
+fun main() {
+    val listTShirt: MutableList<TShirt> = mutableListOf()
+    val torso = TShirt(35, "blue", 150_000)
+    val shiningBright = TShirt(34, "black", 120_000, true)
+    listTShirt.add(torso)
+    listTShirt.add(shiningBright)
 
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
+    val address = Address("household inn", "st. lois", "queens", "14045")
+    val suyatna = User("suyatna", "zuyatna@email.com", ShoppingCart(listTShirt, address))
+    suyatna.shoppingCart.totalCost()
 }

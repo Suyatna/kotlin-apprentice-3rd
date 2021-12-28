@@ -1,0 +1,1 @@
+data class Address(val name: String, val street: String, val city: String, val zip: String)

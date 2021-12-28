@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c4c27f9-96cd-4ebd-9872-c1e9e250c75c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chapter11_challenge02/src/main/kotlin/Address.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chapter11_challenge02/src/main/kotlin/ShoppingCart.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chapter11_challenge02/src/main/kotlin/TShirt.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapter10_challenges/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../chapter10_challenges/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +72,7 @@
       <option name="presentableId" value="Default" />
       <updated>1640666557847</updated>
       <workItem from="1640666559456" duration="1706000" />
+      <workItem from="1640676201633" duration="16000" />
     </task>
     <servers />
   </component>

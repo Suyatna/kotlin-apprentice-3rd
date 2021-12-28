@@ -1,0 +1,1 @@
+data class TShirt(val size: Int, val color: String, val price: Int, val imageFront: Boolean = false)
