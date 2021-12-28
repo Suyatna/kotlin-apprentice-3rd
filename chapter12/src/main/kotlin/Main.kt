@@ -1,7 +1,29 @@
-fun main(args: Array<String>) {
-    println("Hello World!")
+fun main() {
+    val marie = Student(1, "Marie", "Curie")
+    val albert = Student(2, "Albert", "Einstein")
+    val emmy = Student(3, "Emmy", "Noether")
 
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
+    StudentRegistry.addStudent(marie)
+    StudentRegistry.addStudent(albert)
+    StudentRegistry.addStudent(emmy)
+
+    StudentRegistry.listAllStudents()
+}
+
+object StudentRegistry {
+    private val allStudents = mutableListOf<Student>()
+
+    fun addStudent(student: Student) {
+        allStudents.add(student)
+    }
+
+    fun removeStudent(student: Student) {
+        allStudents.remove(student)
+    }
+
+    fun listAllStudents() {
+        allStudents.forEach {
+            println(it.fullName)
+        }
+    }
 }
