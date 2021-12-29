@@ -8,6 +8,7 @@ fun main() {
     StudentRegistry.addStudent(emmy)
 
     StudentRegistry.listAllStudents()
+    println(Student.numberOfStudent())
     println()
 
     val emmyScientist = Scientist.newScientist("Emmy", "Noether")

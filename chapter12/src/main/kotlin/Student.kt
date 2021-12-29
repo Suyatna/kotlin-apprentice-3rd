@@ -4,6 +4,16 @@ data class Student(
     val lastName: String
 ) {
     var fullName = "$firstName $lastName"
+
+    companion object {
+        private var counter = 0
+
+        fun numberOfStudent() = counter
+    }
+
+    init {
+        counter++
+    }
 }
 
 object StudentRegistry {
