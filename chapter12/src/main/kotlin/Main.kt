@@ -8,22 +8,15 @@ fun main() {
     StudentRegistry.addStudent(emmy)
 
     StudentRegistry.listAllStudents()
-}
+    println()
 
-object StudentRegistry {
-    private val allStudents = mutableListOf<Student>()
+    val emmyScientist = Scientist.newScientist("Emmy", "Noether")
+    val isaac = Scientist.newScientist("Isaac", "Newton")
+    val nick = Scientist.newScientist("Nickola", "Tesla")
 
-    fun addStudent(student: Student) {
-        allStudents.add(student)
-    }
+    ScientistRepository.addScientist(emmyScientist)
+    ScientistRepository.addScientist(isaac)
+    ScientistRepository.addScientist(nick)
 
-    fun removeStudent(student: Student) {
-        allStudents.remove(student)
-    }
-
-    fun listAllStudents() {
-        allStudents.forEach {
-            println(it.fullName)
-        }
-    }
+    ScientistRepository.listAllScientists()
 }
