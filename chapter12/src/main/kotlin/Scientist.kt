@@ -1,10 +1,10 @@
 class Scientist private constructor(
-  val id: Int,
-  val firstName: String,
-  val lastName: String
+    val id: Int,
+    firstName: String,
+    lastName: String
 ) {
     companion object {
-        var currentId = 0
+        private var currentId = 0
 
         fun newScientist(
             firstName: String,
@@ -19,7 +19,7 @@ class Scientist private constructor(
 }
 
 object ScientistRepository {
-    val allScientists = mutableListOf<Scientist>()
+    private val allScientists = mutableListOf<Scientist>()
 
     fun addScientist(scientist: Scientist) {
         allScientists.add(scientist)
