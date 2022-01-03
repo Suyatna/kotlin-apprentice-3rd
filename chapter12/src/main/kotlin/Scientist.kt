@@ -19,7 +19,7 @@ class Scientist private constructor(
 }
 
 object ScientistRepository {
-    private val allScientists = mutableListOf<Scientist>()
+    val allScientists = mutableListOf<Scientist>()
 
     fun addScientist(scientist: Scientist) {
         allScientists.add(scientist)

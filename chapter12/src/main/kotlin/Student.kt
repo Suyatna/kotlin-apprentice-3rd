@@ -17,7 +17,7 @@ data class Student(
 }
 
 object StudentRegistry {
-    private val allStudents = mutableListOf<Student>()
+    val allStudents = mutableListOf<Student>()
 
     fun addStudent(student: Student) {
         allStudents.add(student)
