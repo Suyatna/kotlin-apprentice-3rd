@@ -1,0 +1,1 @@
+class Contact2(var fullName: String, val emailAddress: String)
