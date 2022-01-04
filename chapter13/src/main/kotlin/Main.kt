@@ -30,4 +30,9 @@ fun main() {
     contact3.type = "Work"
     println("${contact3.fullName}, ${contact3.emailAddress}, ${contact3.type}")
     println()
+
+    val person = Person("Grace", "Hopper")
+    println(person.fullName)
+
+    val address = Address()
 }
