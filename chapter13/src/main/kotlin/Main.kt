@@ -48,4 +48,16 @@ fun main() {
     tv.diagonal = 70
     println(tv.height)
     println(tv.width)
+    println()
+
+    val level1 = Level(id = 1, boss = "Chameleon", unlocked = true)
+    val level2 = Level(id = 2, boss = "Squid", unlocked = false)
+    val level3 = Level(id = 3, boss = "Chupacabra", unlocked = false)
+    val level4 = Level(id = 4, boss = "Yeti", unlocked = false)
+
+    // error: unresolved reference
+    // can't access members of the companion object on an instance
+    // val highestLevel = level3.highestLevel
+
+    val highestLevel = Level.highestLevel // 1
 }
