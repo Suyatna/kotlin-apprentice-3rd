@@ -1,7 +1,9 @@
-fun main(args: Array<String>) {
-    println("Hello World!")
+fun main() {
+    val contact = Contact("Grace Murray", "grace@navy.mil")
 
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
+    val name = contact.fullName
+    val email = contact.emailAddress
+
+    contact.fullName = "Grace Hopper"
+    val grace = contact.fullName
 }
