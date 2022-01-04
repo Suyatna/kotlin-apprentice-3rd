@@ -33,6 +33,19 @@ fun main() {
 
     val person = Person("Grace", "Hopper")
     println(person.fullName)
+    println()
 
     val address = Address()
+
+    val tv = TV(height = 53.93, width = 95.87)
+    val size = tv.diagonal
+    println(size)
+
+    tv.width = tv.height
+    val diagonal = tv.diagonal
+    println(diagonal)
+
+    tv.diagonal = 70
+    println(tv.height)
+    println(tv.width)
 }
