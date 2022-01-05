@@ -69,4 +69,13 @@ fun main() {
     delegatedLevel2.unlocked = true
 
     println(DelegatedLevel.highestLevel)
+    println()
+
+    val light = LightBulb()
+    light.current = 50
+    var current = light.current // 0
+    println(current)
+    light.current = 40
+    current = light.current // 40
+    println(current)
 }
