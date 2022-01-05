@@ -60,4 +60,13 @@ fun main() {
     // val highestLevel = level3.highestLevel
 
     val highestLevel = Level.highestLevel // 1
+
+    val delegatedLevel1 = DelegatedLevel(id = 1, boss = "Chameleon")
+    val delegatedLevel2 = DelegatedLevel(id = 2, boss = "Squid")
+
+    println(DelegatedLevel.highestLevel)
+
+    delegatedLevel2.unlocked = true
+
+    println(DelegatedLevel.highestLevel)
 }
