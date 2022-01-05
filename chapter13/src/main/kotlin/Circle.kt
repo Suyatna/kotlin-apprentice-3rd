@@ -1,3 +1,4 @@
+import kotlin.math.PI
 import kotlin.math.atan
 
 class Circle(var radius: Double = 0.0) {
@@ -6,4 +7,7 @@ class Circle(var radius: Double = 0.0) {
     }
     val circumference: Double
         get() = pi * radius * 2
+    val area: Double by lazy {
+        PI * radius * radius
+    }
 }

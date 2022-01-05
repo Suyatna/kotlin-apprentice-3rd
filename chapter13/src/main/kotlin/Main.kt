@@ -84,4 +84,18 @@ fun main() {
     val circumference = circle.circumference // 31.42
     // also, pi now has a value
     println(circumference)
+    println(circle.area)
+    println()
+
+    val lamp = Lamp()
+    // ... lamp has no lightBulb, need to buy some
+
+    // println(lamp.bulb)
+    // error: kotlin.UninitializedPropertyAccessException:
+    // lateinit property bulb has not been initialized
+
+    // ... bought some new ones
+    lamp.bulb = LightBulb()
+    println(lamp.bulb)
+    println()
 }
