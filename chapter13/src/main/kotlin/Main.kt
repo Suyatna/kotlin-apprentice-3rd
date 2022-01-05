@@ -1,3 +1,6 @@
+val Circle.diameter: Double
+    get() = 2.0 * radius
+
 fun main() {
     val contact = Contact("Grace Murray", "grace@navy.mil")
 
@@ -98,4 +101,7 @@ fun main() {
     lamp.bulb = LightBulb()
     println(lamp.bulb)
     println()
+
+    val unitCircle = Circle(1.0)
+    println(unitCircle.diameter)
 }
