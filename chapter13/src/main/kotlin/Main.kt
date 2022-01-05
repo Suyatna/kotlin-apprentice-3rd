@@ -78,4 +78,10 @@ fun main() {
     light.current = 40
     current = light.current // 40
     println(current)
+    println()
+
+    val circle = Circle(5.0) // got a circle, pi has not been run
+    val circumference = circle.circumference // 31.42
+    // also, pi now has a value
+    println(circumference)
 }
