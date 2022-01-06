@@ -25,6 +25,14 @@ class SimpleDate3(private var month: String) {
         get() = months.indexOf("December") - months.indexOf(this.month)
 }
 
+class MyMath {
+    companion object {
+        fun factorial(number: Int): Int {
+            return (1..number).fold(1) { a, b -> a * b }
+        }
+    }
+}
+
 fun main() {
     val date2 = SimpleDate2("October")
     println(date2.monthsUntilWinterBreak(date2))
@@ -32,4 +40,6 @@ fun main() {
     val date3 = SimpleDate3("September")
 //    println(date3.monthsUntilWinterBreak())
     println(date3.monthsUntilWinterBreak)
+
+    println(MyMath.factorial(6))
 }
