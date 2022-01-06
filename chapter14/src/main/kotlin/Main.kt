@@ -36,6 +36,54 @@ class MyMath {
     }
 }
 
+class SimpleDate {
+    var month: String = "January"
+
+    fun monthsUntilWinterBreak(from: SimpleDate2): Int {
+        return months.indexOf("December") - months.indexOf(this.month)
+    }
+}
+
+fun SimpleDate.monthsUntilSummerBreak(): Int {
+    return when (months.indexOf(month)) {
+        in 0..months.indexOf("June") -> {
+            months.indexOf("June") - months.indexOf(month)
+        }
+        in months.indexOf("June")..months.indexOf("August") -> {
+            0
+        }
+        else -> {
+            months.indexOf("June") + (12 - months.indexOf(month))
+        }
+    }
+}
+
+fun Int.abs(): Int {
+    return if (this < 0) -this else this
+}
+
+fun MyMath.Companion.primeFactors(value: Int): List<Int> {
+    var remainingValue = value
+
+    var testFactor = 2
+    val primes = mutableListOf<Int>()
+
+    while (testFactor * testFactor <= remainingValue) {
+        if (remainingValue % testFactor == 0) {
+            primes.add(testFactor)
+            remainingValue /= testFactor
+        } else {
+            testFactor += 1
+        }
+    }
+
+    if (remainingValue > 1) {
+        primes.add(remainingValue)
+    }
+
+    return primes
+}
+
 fun main() {
     val date2 = SimpleDate2("October")
     println(date2.monthsUntilWinterBreak(date2))
@@ -45,4 +93,17 @@ fun main() {
     println(date3.monthsUntilWinterBreak)
 
     println(MyMath.factorial(6))
-    println(MyMath.triangleNumber(4)
+    println(MyMath.triangleNumber(4))
+    println()
+
+    val date = SimpleDate()
+    date.month = "December"
+    println(date.monthsUntilSummerBreak())
+    println()
+
+    println(4.abs())
+    println((-4).abs())
+    println()
+
+    println(MyMath.primeFactors(81))
+}
