@@ -30,6 +30,9 @@ class MyMath {
         fun factorial(number: Int): Int {
             return (1..number).fold(1) { a, b -> a * b }
         }
+        fun triangleNumber(number: Int): Int {
+            return (1..number).fold(0) { a, b -> a + b }
+        }
     }
 }
 
@@ -42,4 +45,4 @@ fun main() {
     println(date3.monthsUntilWinterBreak)
 
     println(MyMath.factorial(6))
-}
+    println(MyMath.triangleNumber(4)
