@@ -11,16 +11,18 @@ fun monthsUntilWinterBreak(from: SimpleDate1): Int {
     return months.indexOf("December") - months.indexOf(from.month)
 }
 
-class SimpleDate2(var month: String) {
+class SimpleDate2(private var month: String) {
     fun monthsUntilWinterBreak(from: SimpleDate2): Int {
         return months.indexOf("December") - months.indexOf(from.month)
     }
 }
 
-class SimpleDate3(var month: String) {
-    fun monthsUntilWinterBreak(): Int {
-        return months.indexOf("December") - months.indexOf(this.month)
-    }
+class SimpleDate3(private var month: String) {
+//    fun monthsUntilWinterBreak(): Int {
+//        return months.indexOf("December") - months.indexOf(this.month)
+//    }
+    val monthsUntilWinterBreak: Int
+        get() = months.indexOf("December") - months.indexOf(this.month)
 }
 
 fun main() {
@@ -28,5 +30,6 @@ fun main() {
     println(date2.monthsUntilWinterBreak(date2))
 
     val date3 = SimpleDate3("September")
-    println(date3.monthsUntilWinterBreak())
+//    println(date3.monthsUntilWinterBreak())
+    println(date3.monthsUntilWinterBreak)
 }
