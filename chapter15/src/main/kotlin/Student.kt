@@ -1,9 +1,9 @@
 class Student(
-    var firstName: String,
-    var lastName: String,
+    firstName: String,
+    lastName: String,
     var grades: MutableList<Grade> = mutableListOf()
-) {
-    fun recordGrace(grade: Grade) {
+): Person(firstName, lastName) {
+    fun recordGrade(grade: Grade) {
         grades.add(grade)
     }
 }
