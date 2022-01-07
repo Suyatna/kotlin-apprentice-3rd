@@ -10,4 +10,21 @@ fun main() {
     // john.recordGrade(history) // john not a student!
 
     println("Jane: ${jane.grades}")
+    println()
+
+    fun phonebookName(person: Person): String {
+        return "${person.lastName}, ${person.firstName}"
+    }
+
+    val person = Person(
+        firstName = "Johnny",
+        lastName = "Appleseed"
+    )
+    val oboePlayer = OboePlayer(
+        firstName = "Jane",
+        lastName = "Appleseed"
+    )
+
+    println(phonebookName(person))
+    println(phonebookName(oboePlayer))
 }
