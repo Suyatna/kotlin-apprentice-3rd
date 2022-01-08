@@ -51,4 +51,21 @@ fun main() {
 
     println(afterClassActivity(oboePlayer))
     println(afterClassActivity(oboePlayer as Student))
+    println()
+
+    val math = Grade(letter = 'B', points = 9.0, credits = 3.0)
+    val science = Grade(letter = 'F', points = 9.0, credits = 3.0)
+    val physics = Grade(letter = 'F', points = 9.0, credits = 3.0)
+    val chemistry = Grade(letter = 'F', points = 9.0, credits = 3.0)
+
+    val dom = StudentAthlete(firstName = "Dom", lastName = "Grady")
+    dom.recordGrade(math)
+    dom.recordGrade(science)
+    dom.recordGrade(physics)
+
+    println(dom.isEligible)
+
+    dom.recordGrade(chemistry)
+
+    println(dom.isEligible)
 }
