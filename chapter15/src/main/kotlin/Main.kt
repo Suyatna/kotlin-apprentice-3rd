@@ -27,4 +27,28 @@ fun main() {
 
     println(phonebookName(person))
     println(phonebookName(oboePlayer))
+    println()
+
+    var hallMonitor = Student(firstName = "Jill", lastName = "Banana")
+    hallMonitor = oboePlayer
+
+    println(hallMonitor is OboePlayer) // true, since assigned it to oboePlayer
+    println(hallMonitor !is OboePlayer) // also have !is for "not-is"
+    println(hallMonitor is Person) // true, because Person is ancestor of OboePlayer
+    println()
+
+    // (oboePlayer as Student).minimumPracticeTime // error: no longer a band member!
+    println((hallMonitor as? BandMember)?.minimumPracticeTime) // 4 if hallMonitor = oboePlayer, else null
+    println()
+
+    fun afterClassActivity(student: Student): String {
+        return "Goes home!"
+    }
+
+    fun afterClassActivity(student: BandMember): String {
+        return "Goes to practice!"
+    }
+
+    println(afterClassActivity(oboePlayer))
+    println(afterClassActivity(oboePlayer as Student))
 }
