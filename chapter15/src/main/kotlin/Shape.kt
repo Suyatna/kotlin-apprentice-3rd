@@ -1,4 +1,19 @@
-sealed class Shape {
-    class Circle(val radius: Int): Shape()
-    class Square(val sideLength: Int): Shape()
+open class Shape {
+    constructor(size: Int) {
+        // ...
+    }
+
+    constructor(size: Int, color: String) : this(size) {
+        // ...
+    }
+}
+
+class Circle : Shape {
+    constructor(size: Int) : super(size) {
+        // ...
+    }
+
+    constructor(size: Int, color: String) : super(size, color) {
+        // ...
+    }
 }
