@@ -68,4 +68,23 @@ fun main() {
     dom.recordGrade(chemistry)
 
     println(dom.isEligible)
+
+    val human = Human("1/1/2000")
+    // val mammal = Mammal("1/1/2000") // error: cannot create an instance of an abstract class
+    println()
+
+    val circle1 = Shape.Circle(4)
+    val circle2 = Shape.Circle(2)
+    val square1 = Shape.Circle(4)
+    val square2 = Shape.Circle(2)
+
+    fun size(shape: Shape): Int {
+        return when (shape) {
+            is Shape.Circle -> shape.radius
+            is Shape.Square -> shape.sideLength
+        }
+    }
+
+    println(size(circle1)) // radius of 4
+    println(size(square2)) // sideLength of 2
 }
