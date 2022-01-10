@@ -2,7 +2,7 @@ class StudentAthlete(
     firstName: String,
     lastName: String
 ) : Student(firstName, lastName) {
-    val failedClasses = mutableListOf<Grade>()
+    private val failedClasses = mutableListOf<Grade>()
 
     override fun recordGrade(grade: Grade) {
         super.recordGrade(grade)
