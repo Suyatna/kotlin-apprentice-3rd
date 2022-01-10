@@ -73,4 +73,7 @@ fun main() {
     // val mammal = Mammal("1/1/2000") // error: cannot create an instance of an abstract class
     println()
 
+    val mazda = Car("mazda")
+    val mazdaEngine = mazda.Engine("rotary")
+    println(mazdaEngine)
 }
