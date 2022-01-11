@@ -76,4 +76,16 @@ fun main() {
     val mazda = Car("mazda")
     val mazdaEngine = mazda.Engine("rotary")
     println(mazdaEngine)
+    println()
+
+    val privilegeUser = PrivilegeUser(
+        username = "Suyatna",
+        id = "1234",
+        age = 24
+    )
+
+    val privilege = Privilege(1, "invisibility")
+
+    privilegeUser.addPrivilege(privilege)
+    println(privilegeUser.about())
 }
