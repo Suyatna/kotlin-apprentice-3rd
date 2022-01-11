@@ -1,7 +1,16 @@
-fun main(args: Array<String>) {
-    println("Hello World!")
+fun main() {
+    // challenge 1
+    val c = C()
+    val a = A()
 
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
+    println(c)
+    println(a)
+    println()
+
+    // challenge 2
+    println(c as A)
+    // I use `as` because I'm sure that C is a subclass of A and I know I don't have to handle the null case
+
+    println(a as? C)
+    // I use `as?` because A is not a subclass of C and I want to avoid a runtime exception
 }
