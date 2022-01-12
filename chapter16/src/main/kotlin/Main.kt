@@ -1,7 +1,13 @@
-fun main(args: Array<String>) {
-    println("Hello World!")
+fun main() {
+    for (day in DayOfTheWeek.values()) {
+        println("Day ${day.ordinal}: ${day.name}")
+    }
+    println()
 
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
+    val dayIndex = 0
+    val dayAtIndex = DayOfTheWeek.values()[dayIndex]
+    println("Day at $dayIndex is $dayAtIndex")
+
+    val tuesday = DayOfTheWeek.valueOf("Tuesday")
+    println("Tuesday is day ${tuesday.ordinal}")
 }
