@@ -60,4 +60,25 @@ fun main() {
     println("From Saturday there are $daysUntilWeekendFromSaturday days until the weekend, " +
             "which starts on $firstWeekendDay")
     println()
+
+    /*
+    Challenge 3
+
+    Create a way to add together the value of two AcceptedCurrency objects.
+    Think about following scenarios:
+    a) What should happen if both currencies are the same type?
+    b) What should happen if the currencies are of different types?
+     */
+
+    val currency = AcceptedCurrency.Crypto()
+    println("You've got some ${currency.name}!")
+
+    currency.amount = 0.27541f
+    println("${currency.amount} of ${currency.name} is ${currency.totalValueInDollars()} in Dollars")
+
+    val dollars = AcceptedCurrency.Dollar()
+    dollars.amount = 2000f
+
+    val sufficientBalance = AcceptedCurrency.checkSufficientFunds(listOf(currency, dollars), 1000f)
+    println("You ${if (sufficientBalance) "do" else "don't"} have enough money to buy the thing!")
 }
