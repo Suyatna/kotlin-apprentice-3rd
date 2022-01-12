@@ -79,7 +79,16 @@ fun main() {
     val dollars = AcceptedCurrency.Dollar()
     dollars.amount = 2000f
 
+    /*
+    Challenge 4
+
+    Create a function that can take a List of AcceptedCurrency objects and the cost of an item in Dollars,
+    and return whether the user has sufficient funds in the list of currency objects to pay for
+    what they're trying to buy.
+     */
+
     val sufficientBalance = AcceptedCurrency.checkSufficientFunds(listOf(currency, dollars), 1000f)
     println("You ${if (sufficientBalance) "do" else "don't"} have enough money to buy the thing!")
     println("Total funds: ${AcceptedCurrency.totalFundsInDollars}")
+    println()
 }
