@@ -4,7 +4,6 @@ import kotlin.concurrent.timerTask
 import kotlin.system.exitProcess
 
 enum class DownloadState {
-    Idle,
     Starting,
     InProgress,
     Error,
@@ -14,11 +13,14 @@ enum class DownloadState {
 class Downloader {
 
     private val maxData = 100
-    private var downloadState = DownloadState.Idle
+    private var downloadState: DownloadState? = null
     private var fakeData: MutableList<Int> = mutableListOf()
 
-    fun downloadData(fromUrl: String, progress: (state: DownloadState) -> Unit,
-                     completion: (error: Error?, data: List<Int>?) -> Unit) {
+    fun downloadData(fromUrl: String,
+                     progress: (state: DownloadState?) -> Unit,
+                     completion: (error: Error?, data: List<Int>?) -> Unit
+    ) {
+        // rest of method unchanged
         println("\"Downloading\" from URL: $fromUrl")
         postProgress(progress)
         downloadState = DownloadState.Starting
@@ -64,7 +66,9 @@ class Downloader {
         }
     }
 
-    private fun postProgress(progress: (state: DownloadState) -> Unit) {
+    private fun postProgress(
+        progress: (state: DownloadState?) -> Unit
+    ) {
         progress(downloadState)
 
         when (downloadState) {
