@@ -81,4 +81,5 @@ fun main() {
 
     val sufficientBalance = AcceptedCurrency.checkSufficientFunds(listOf(currency, dollars), 1000f)
     println("You ${if (sufficientBalance) "do" else "don't"} have enough money to buy the thing!")
+    println("Total funds: ${AcceptedCurrency.totalFundsInDollars}")
 }
