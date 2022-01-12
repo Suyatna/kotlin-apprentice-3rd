@@ -30,4 +30,11 @@ fun main() {
         DayOfTheWeek.Saturday -> println("$today, wait...")
         DayOfTheWeek.Sunday -> println("$today always comes too late")
     }
+    println()
+
+    val currency = AcceptedCurrency.Crypto()
+    println("You've got some ${currency.name}!")
+
+    currency.amount = 0.27541f
+    println("${currency.amount} of ${currency.name} is ${currency.totalValueInDollars()} in Dollars")
 }
