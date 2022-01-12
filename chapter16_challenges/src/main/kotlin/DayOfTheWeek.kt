@@ -3,11 +3,11 @@ import java.util.*
 enum class DayOfTheWeek(val isWeekend: Boolean = false) {
     Monday,
     Tuesday,
-    Wednesday,
-    Thursday,
+    Wednesday(true),
+    Thursday(true),
     Friday,
-    Saturday(true),
-    Sunday(true);
+    Saturday,
+    Sunday;
 
     fun daysUntil(other: DayOfTheWeek): Int {
         return if (this.ordinal < other.ordinal) {

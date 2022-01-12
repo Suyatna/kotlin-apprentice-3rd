@@ -42,4 +42,22 @@ fun main() {
     val suyatnaDay = DayOfTheWeek.forString(suyatnaDayString)
     println("Day of the week for string \"$suyatnaDayString\": $suyatnaDay")
     println()
+
+    /*
+    Challenge 2
+
+    Add a function to DayOfTheWeek to calculate how many days until the next weekend begins.
+    Then, update your code so that the weekend is Wednesday and Thursday instead of Saturday and Sunday.
+    Does it still work?
+     */
+
+    val firstWeekendDay = DayOfTheWeek.firstWeekendDay()
+    val daysUntilWeekendFromWednesday = DayOfTheWeek.Wednesday.daysUntilWeekend()
+    println("From Wednesday there are $daysUntilWeekendFromWednesday days until the weekend, " +
+            "which starts on $firstWeekendDay")
+
+    val daysUntilWeekendFromSaturday = DayOfTheWeek.Saturday.daysUntilWeekend()
+    println("From Saturday there are $daysUntilWeekendFromSaturday days until the weekend, " +
+            "which starts on $firstWeekendDay")
+    println()
 }
