@@ -25,4 +25,10 @@ fun main() {
     println(tank.weight)
     println(tank.name)
     println()
+
+    val square = Square(4.0)
+    val triangle = Triangle(3.0, 5.0)
+    val circle = Circle(2.0)
+    val shapes = arrayOf(square, triangle, circle)
+    println(shapes.map { it.area })
 }
