@@ -14,4 +14,15 @@ fun main() {
     enterprise.stop()
     // > Whoa, slow down!
     // > That kind of hurt!
+    println()
+
+    val carProperties = Car()
+    println(carProperties.weight)
+    println(carProperties.name)
+    println()
+
+    val tank = Tank()
+    println(tank.weight)
+    println(tank.name)
+    println()
 }
