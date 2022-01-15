@@ -13,7 +13,6 @@ fun main() {
     val things= mutableListOf<Any>(1, 2)
     things.add("Steve")
     println("Things: ${things.toBulletedList()}")
-    println()
 
     val map = mapOf(
         Pair("one", 1),
@@ -25,7 +24,30 @@ fun main() {
         .filter { it.contains("e") }
         .map { "Value for $it: ${map[it]}" }
     println("Values for keys with E: ${valuesForKeysWithE.toBulletedList()}")
-    println()
 
     println("Names: ${names.toBulletedList()}")
+
+    val cheapThings = listOf(
+        CheapThing("Cinder Block Table"),
+        CheapThing("Box Of Old Books"),
+        CheapThing("Ugly Old Couch")
+    )
+
+    val cheapMover = Mover(cheapThings)
+    cheapMover.moveEverythingIntoTruck()
+    cheapMover.moveEverythingToNewPlace()
+    cheapMover.finishMove()
+
+    val television = BreakableThing("Flat-Screen Television")
+    val breakableThing = listOf(
+        television,
+        BreakableThing("Mirror"),
+        BreakableThing("Guitar")
+    )
+
+    val expensiveMover = Mover(breakableThing)
+    television.smash()
+    expensiveMover.moveEverythingIntoTruck()
+    expensiveMover.moveEverythingToNewPlace()
+    expensiveMover.finishMove()
 }
