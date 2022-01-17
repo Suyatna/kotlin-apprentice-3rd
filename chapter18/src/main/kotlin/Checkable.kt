@@ -1,3 +1,3 @@
-interface Changeable {
+interface Checkable {
     fun checkIsOk(): Boolean
 }

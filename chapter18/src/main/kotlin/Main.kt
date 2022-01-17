@@ -34,8 +34,8 @@ fun main() {
     )
 
     val cheapMover = Mover(cheapThings)
-    cheapMover.moveEverythingIntoTruck()
-    cheapMover.moveEverythingToNewPlace()
+    cheapMover.moveEverythingToTruck()
+    cheapMover.moveEverythingIntoNewPlace()
     cheapMover.finishMove()
 
     val television = BreakableThing("Flat-Screen Television")
@@ -47,7 +47,7 @@ fun main() {
 
     val expensiveMover = Mover(breakableThing)
     television.smash()
-    expensiveMover.moveEverythingIntoTruck()
-    expensiveMover.moveEverythingToNewPlace()
+    expensiveMover.moveEverythingToTruck()
+    expensiveMover.moveEverythingIntoNewPlace()
     expensiveMover.finishMove()
 }
