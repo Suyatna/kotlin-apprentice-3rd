@@ -1,6 +1,7 @@
+@Suppress("KotlinConstantConditions")
 class Mover<T: Checkable>(
     thingsToMove: List<T>,
-    val truckHeightInInches: Int = (12 * 12)
+    @Suppress("KotlinConstantConditions") val truckHeightInInches: Int = (12 * 12)
 ) {
     private var thingsLeftInOldPlace = mutableListOf<T>()
     private var thingsInTruck = mutableListOf<Any>()
