@@ -3,7 +3,7 @@ class Mover<T: Checkable>(
     val truckHeightInInches: Int = (12 * 12)
 ) {
     private var thingsLeftInOldPlace = mutableListOf<T>()
-    private var thingsInTruck = mutableListOf<T>()
+    private var thingsInTruck = mutableListOf<Any>()
     private var thingsInNewPlace = mutableListOf<T>()
     private var thingsWhichFailedCheck = mutableListOf<T>()
 
@@ -11,18 +11,31 @@ class Mover<T: Checkable>(
         thingsLeftInOldPlace.addAll(thingsToMove)
     }
 
-    fun moveEverythingToTruck() {
+    fun moveEverythingToTruck(startingContainer: Container<T>?) {
+        var currentContainer = startingContainer
+
         while (thingsLeftInOldPlace.isNotEmpty()) {
             val item = thingsLeftInOldPlace.removeAt(0)
 
             if (item.checkIsOk()) {
                 thingsInTruck.add(item)
                 println("Moved your $item to the truck")
+
+                if (currentContainer != null) {
+
+                }
             } else {
                 thingsWhichFailedCheck.add(item)
                 println("Couldn't move your $item to the truck :[")
             }
         }
+
+        currentContainer?.let { moveContainerToTruck(it) }
+    }
+
+    fun moveContainerToTruck(container: Container<T>) {
+        thingsInTruck.add(container)
+        println("Moved a container with your ${container.contents().toBulletedList()} to the truck")
     }
 
     fun moveEverythingIntoNewPlace() {
