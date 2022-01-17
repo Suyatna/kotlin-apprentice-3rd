@@ -18,9 +18,6 @@ class Mover<T: Checkable>(
             val item = thingsLeftInOldPlace.removeAt(0)
 
             if (item.checkIsOk()) {
-                thingsInTruck.add(item)
-                println("Moved your $item to the truck")
-
                 if (currentContainer != null) {
                     if (!currentContainer.canAddAnotherItem()) {
                         moveContainerToTruck(currentContainer)
@@ -42,19 +39,34 @@ class Mover<T: Checkable>(
         currentContainer?.let { moveContainerToTruck(it) }
     }
 
-    fun moveContainerToTruck(container: Container<T>) {
+    private fun moveContainerToTruck(container: Container<T>) {
         thingsInTruck.add(container)
         println("Moved a container with your ${container.contents().toBulletedList()} to the truck")
     }
 
     fun moveEverythingIntoNewPlace() {
-        while (thingsInTruck.isNotEmpty()) {
-            val item = thingsInTruck.removeAt(0)
+        val containers = thingsInTruck.filterIsInstance<Container<T>>()
 
-            if (item is Container<*>) {
-                val itemContainer = item.removeItem()
+        for (container in containers) {
+            thingsInTruck.remove(container)
+
+            while (container.canRemoveAnotherItem()) {
+                val itemInContainer = container.removeItem()
+                println("Unpacked your $itemInContainer")
+                tryToMoveItemIntoNewPlace(itemInContainer)
             }
         }
+
+        while (thingsInTruck.isNotEmpty()) {
+            @Suppress("UNCHECKED_CAST")
+            val item = thingsInTruck.removeAt(0) as? T
+            if (item != null) {
+                tryToMoveItemIntoNewPlace(item)
+            } else {
+                println("Something in the truck was not of the expected generic type: $item")
+            }
+        }
+
     }
 
     private fun tryToMoveItemIntoNewPlace(item: T) {
