@@ -22,7 +22,16 @@ class Mover<T: Checkable>(
                 println("Moved your $item to the truck")
 
                 if (currentContainer != null) {
+                    if (!currentContainer.canAddAnotherItem()) {
+                        moveContainerToTruck(currentContainer)
+                        currentContainer = currentContainer.getAnother()
+                    }
 
+                    currentContainer.addItem(item)
+                    println("Packed your $item")
+                } else {
+                    thingsInTruck.add(item)
+                    println("Moved your $item to the truck!")
                 }
             } else {
                 thingsWhichFailedCheck.add(item)
@@ -42,13 +51,19 @@ class Mover<T: Checkable>(
         while (thingsInTruck.isNotEmpty()) {
             val item = thingsInTruck.removeAt(0)
 
-            if (item.checkIsOk()) {
-                thingsInNewPlace.add(item)
-                println("Moved your $item into your new place!")
-            } else {
-                thingsWhichFailedCheck.add(item)
-                println("Couldn't move your $item into your new place! :[")
+            if (item is Container<*>) {
+                val itemContainer = item.removeItem()
             }
+        }
+    }
+
+    private fun tryToMoveItemIntoNewPlace(item: T) {
+        if (item.checkIsOk()) {
+            thingsInNewPlace.add(item)
+            println("Moved your $item into your new place!")
+        } else {
+            thingsWhichFailedCheck.add(item)
+            println("Couldn't move your $item into your new place! :[")
         }
     }
 
@@ -60,7 +75,7 @@ class Mover<T: Checkable>(
         }
     }
 
-    fun <T> List<T>.toBulletedList(): String {
+    private fun <T> List<T>.toBulletedList(): String {
         val separator = "\n - "
         return this.joinToString(separator, prefix = separator, postfix = "\n") { "$it" }
     }
