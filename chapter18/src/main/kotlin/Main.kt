@@ -53,3 +53,14 @@ fun main() {
     expensiveMover.moveEverythingIntoNewPlace()
     expensiveMover.finishMove()
 }
+
+fun compare(comparator: Comparable<Number>) {
+    val int = 1
+    comparator.compareTo(int)
+    val float = 1.0f
+    comparator.compareTo(float)
+
+    val intComparable: Comparable<Int> = comparator
+    intComparable.compareTo(int)
+//    intComparable.compareTo(float)
+}
