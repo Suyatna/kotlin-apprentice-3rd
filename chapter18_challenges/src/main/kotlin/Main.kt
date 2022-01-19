@@ -34,4 +34,20 @@ fun main() {
     println("Classmate:")
     classmate.printNames()
     println()
+
+    /*
+    Challenge 2
+
+    Create a `Vehicle` class that conforms to `Checkable` class and a `ShippingContainer` class
+    that conforms to Container<Vehicle>, but that which only takes one vehicle at a time. Each vehicle should:
+    a)  Know its own height in inches.
+    b)  Know its model and brand names.
+    c)  Display a combination of its model and brand names instead of its INSTANCE ADDRESS
+        when printed out using println().
+    d)  Have a variable for a lambda, which allows callers to verify if the vehicle's height,
+        in inches, is too big for a Mover's truck by passing in the height of the vehicle to the lambda,
+        then returning a Boolean value from the lambda of whether it will fill.
+        (Hint: You can't do this as part of a constructor, since you won't have a reference to the Mover yet).
+    e)  Use that function as part of `checkIsOk()`.
+     */
 }
