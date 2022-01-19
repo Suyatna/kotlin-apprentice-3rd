@@ -7,26 +7,30 @@ class ShippingContainer : Container<Vehicle> {
     var vehicle: Vehicle? = null
 
     override fun canAddAnotherItem(): Boolean {
-        TODO("Not yet implemented")
+        return vehicle == null
     }
 
     override fun addItem(item: Vehicle) {
-        TODO("Not yet implemented")
+        this.vehicle = item
     }
 
     override fun canRemoveAnotherItem(): Boolean {
-        TODO("Not yet implemented")
+        return vehicle != null
     }
 
     override fun removeItem(): Vehicle {
-        TODO("Not yet implemented")
+        val itemToReturn = vehicle!!
+        vehicle = null
+        return itemToReturn
     }
 
     override fun getAnother(): Container<Vehicle> {
-        TODO("Not yet implemented")
+        return ShippingContainer()
     }
 
     override fun contents(): List<Vehicle> {
-        TODO("Not yet implemented")
+        var list = mutableListOf<Vehicle>()
+        vehicle?.let { list.add(it) }
+        return list
     }
 }

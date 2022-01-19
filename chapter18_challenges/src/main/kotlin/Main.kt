@@ -1,6 +1,7 @@
 import `interface`.PersonWithName
 import person.Classmate
 import person.Relative
+import vehicle.Vehicle
 
 fun <T: PersonWithName> List<T>.printNames() {
     forEach { println("${it.firstName} ${it.lastName}") }
@@ -50,4 +51,12 @@ fun main() {
         (Hint: You can't do this as part of a constructor, since you won't have a reference to the Mover yet).
     e)  Use that function as part of `checkIsOk()`.
      */
+
+    val vehicle = listOf(
+        Vehicle("Yamaha", "Vino", 40),
+        Vehicle("Toyota", "Corolla", 58),
+        Vehicle("Freighter", "Cascade", 150)
+    )
+
+    // TODO: Add Interface Mover
 }
