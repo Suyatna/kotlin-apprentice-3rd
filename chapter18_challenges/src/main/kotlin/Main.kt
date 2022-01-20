@@ -1,4 +1,7 @@
+import `interface`.Checkable
 import `interface`.PersonWithName
+import mover.BreakableThing
+import mover.CheapThing
 import mover.Mover
 import person.Classmate
 import person.Relative
@@ -86,4 +89,29 @@ fun main() {
     a)  What is the type you need to pass to create a mover who can move all of these types of things?
     b)  Is there a kind of `Container` you can pass to this mover? If there is, what kind is it?
      */
+    val cheapThings = listOf(
+        CheapThing("Cinder Block table"),
+        CheapThing("Box of old books"),
+        CheapThing("Ugly old couch")
+    )
+
+    val television = BreakableThing("Flat-Screen Television")
+    val breakableThings = listOf(
+        television,
+        BreakableThing("Mirror"),
+        BreakableThing("Guitar")
+    )
+
+    val items = mutableListOf<Checkable>()
+    items.addAll(cheapThings)
+    items.addAll(breakableThings)
+    items.addAll(vehicles)
+
+    val everythingMover = Mover(items, 200)
+
+    vehicles.forEach { it.heightCheckFunction = vehicleMover::fitsInTruck }
+
+    everythingMover.moveEverythingToTruck(null)
+    everythingMover.moveEverythingIntoNewPlace()
+    everythingMover.finishMove()
 }
