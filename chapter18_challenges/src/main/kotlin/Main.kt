@@ -54,6 +54,16 @@ fun main() {
     e)  Use that function as part of `checkIsOk()`.
      */
 
+    /*
+    Challenge 3
+
+    Use the default constructor of `Mover<Vehicle>` and the functions you've already used to try to move three
+    vehicles in `ShippingContainers` : A Yamaha Vino, which is 40 inches tall; a Toyota Corolla, which is
+    58 inches tall; and a Freighter Cascade, which is 150 inches tall. After doing that, answer the following questions:
+    a)  How many of your vehicle does a mover--who is created using the default values--move?
+    b)  Do you need to adjust the height of the moving vehicle in order to get all the vehicles to be moved?
+        If so, what is the height it needs to be adjusted to?
+     */
     val vehicles = listOf(
         Vehicle("Yamaha", "Vino", 40),
         Vehicle("Toyota", "Corolla", 58),
