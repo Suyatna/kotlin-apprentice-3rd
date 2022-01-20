@@ -1,6 +1,8 @@
 import `interface`.PersonWithName
+import mover.Mover
 import person.Classmate
 import person.Relative
+import vehicle.ShippingContainer
 import vehicle.Vehicle
 
 fun <T: PersonWithName> List<T>.printNames() {
@@ -45,18 +47,24 @@ fun main() {
     b)  Know its model and brand names.
     c)  Display a combination of its model and brand names instead of its INSTANCE ADDRESS
         when printed out using println().
-    d)  Have a variable for a lambda, which allows callers to verify if the vehicle's height,
-        in inches, is too big for a Mover's truck by passing in the height of the vehicle to the lambda,
+    d)  Have a VARIABLE FOR A LAMBDA, which allows callers to verify if the vehicle's height,
+        in inches, is too big for a MOVER'S TRUCK by passing in the height of the vehicle to the lambda,
         then returning a Boolean value from the lambda of whether it will fill.
-        (Hint: You can't do this as part of a constructor, since you won't have a reference to the Mover yet).
+        (Hint: You can't do this as part of a constructor, since you won't have a reference to the MOVER yet).
     e)  Use that function as part of `checkIsOk()`.
      */
 
-    val vehicle = listOf(
+    val vehicles = listOf(
         Vehicle("Yamaha", "Vino", 40),
         Vehicle("Toyota", "Corolla", 58),
         Vehicle("Freighter", "Cascade", 150)
     )
 
-    // TODO: Add Interface Mover
+    val vehicleMover = Mover(vehicles)
+
+    vehicles.forEach { it.heightCheckFunction = vehicleMover::fitsInTruck }
+
+    vehicleMover.moveEverythingToTruck(ShippingContainer())
+    vehicleMover.moveEverythingIntoNewPlace()
+    vehicleMover.finishMove()
 }
