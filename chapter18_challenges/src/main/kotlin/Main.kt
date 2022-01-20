@@ -77,4 +77,13 @@ fun main() {
     vehicleMover.moveEverythingToTruck(ShippingContainer())
     vehicleMover.moveEverythingIntoNewPlace()
     vehicleMover.finishMove()
+
+    /*
+    Challenge 4
+
+    Create a `Mover` object that can move all the vehicle, `BreakableThing` and `CheapThing` objects
+    you've already created.
+    a)  What is the type you need to pass to create a mover who can move all of these types of things?
+    b)  Is there a kind of `Container` you can pass to this mover? If there is, what kind is it?
+     */
 }
