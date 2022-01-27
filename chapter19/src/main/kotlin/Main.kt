@@ -17,4 +17,19 @@ fun main() {
     )
 
     println("Billing Address:\n$billingAddress")
+
+    user.addOrUpdateAddress(billingAddress)
+
+    val shippingAddress = Address(
+        "987 Unreal Driver",
+        null,
+        "Burbank",
+        "CA",
+        "91523",
+        AddressType.Shipping
+    )
+
+    user.addOrUpdateAddress(shippingAddress)
+
+    println("User info after adding addresses:\n$user")
 }

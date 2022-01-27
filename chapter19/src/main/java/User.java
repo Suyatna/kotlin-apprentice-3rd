@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class User {
 
     private String firstName;
@@ -21,6 +24,16 @@ public class User {
 
     @Override
     public String toString() {
-        return firstName + " " + lastName;
+        return UserExtensions.getFullName(this) + " - Address: " + addresses.size();
     }
+
+    public List<Address> getAddresses() {
+        return addresses;
+    }
+
+    public void setAddresses(List<Address> addresses) {
+        this.addresses = addresses;
+    }
+
+    private List<Address> addresses = new ArrayList<>();
 }

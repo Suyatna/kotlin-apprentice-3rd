@@ -8,7 +8,7 @@ enum class AddressType {
 
 data class Address(
     val streetLine1: String,
-    val streetLine2: String,
+    val streetLine2: String?,
     val city: String,
     val stateOrProvince: String,
     val postalCode: String,
