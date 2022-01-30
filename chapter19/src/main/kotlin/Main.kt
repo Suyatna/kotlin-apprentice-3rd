@@ -32,4 +32,7 @@ fun main() {
     user.addOrUpdateAddress(shippingAddress)
 
     println("User info after adding addresses:\n$user")
+
+    println("Shipping Label:")
+    printLabelFor(user, AddressType.Shipping)
 }
