@@ -1,3 +1,6 @@
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,6 +23,7 @@ public class User {
         return builder.toString();
     }
 
+    @Nullable
     public String getFirstName() {
         return firstName;
     }
@@ -28,6 +32,7 @@ public class User {
         this.firstName = firstName;
     }
 
+    @Nullable
     public String getLastName() {
         return lastName;
     }
@@ -41,6 +46,7 @@ public class User {
         return UserExtensions.getFullName(this) + " - Address: " + addresses.size() + "\n" + allAddress();
     }
 
+    @NotNull
     public List<Address> getAddresses() {
         return addresses;
     }

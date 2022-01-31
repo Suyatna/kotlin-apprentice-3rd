@@ -35,4 +35,10 @@ fun main() {
 
     println("Shipping Label:")
     printLabelFor(user, AddressType.Shipping)
+
+    val anotherUser = User()
+//    anotherUser.addresses = null
+    println("Another User has ${anotherUser.addresses.count()} addresses")
+
+    println("Another User first name: ${anotherUser.firstName ?: "(not set)"}")
 }
