@@ -1,3 +1,5 @@
+@file:JvmName("LabelPrinter")
+
 fun labelFor(user: User, type: AddressType): String {
     val address = user.addressOfType(type)
     if (address != null) {

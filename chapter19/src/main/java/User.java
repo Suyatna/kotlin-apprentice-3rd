@@ -6,6 +6,20 @@ public class User {
     private String firstName;
     private String lastName;
 
+    public String allAddress() {
+        StringBuilder builder = new StringBuilder();
+        for (Address address : addresses) {
+            builder.append(
+                    address.getAddressType().name() + " address:\n"
+            );
+            builder.append(
+                    LabelPrinter.labelFor(this, address.getAddressType())
+            );
+        }
+
+        return builder.toString();
+    }
+
     public String getFirstName() {
         return firstName;
     }
@@ -24,7 +38,7 @@ public class User {
 
     @Override
     public String toString() {
-        return UserExtensions.getFullName(this) + " - Address: " + addresses.size();
+        return UserExtensions.getFullName(this) + " - Address: " + addresses.size() + "\n" + allAddress();
     }
 
     public List<Address> getAddresses() {
