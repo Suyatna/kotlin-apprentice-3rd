@@ -34,7 +34,7 @@ fun main() {
     println("User info after adding addresses:\n$user")
 
     println("Shipping Label:")
-    printLabelFor(user, AddressType.Shipping)
+    printLabelFor(user)
 
     val anotherUser = User()
 //    anotherUser.addresses = null

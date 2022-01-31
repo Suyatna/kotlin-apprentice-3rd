@@ -6,7 +6,7 @@ enum class AddressType {
     Gift
 }
 
-data class Address(
+data class Address @JvmOverloads constructor(
     val streetLine1: String,
     val streetLine2: String?,
     val city: String,

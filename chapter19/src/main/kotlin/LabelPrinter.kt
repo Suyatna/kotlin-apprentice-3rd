@@ -1,17 +1,18 @@
 @file:JvmName("LabelPrinter")
 
-fun labelFor(user: User, type: AddressType): String {
+fun labelFor(user: User, type: AddressType = AddressType.Shipping): String {
     val address = user.addressOfType(type)
-    if (address != null) {
+    return if (address != null) {
         var label = "-------------------\n"
         label += "${user.fullName}\n${address.forPostalLabel()}\n"
         label += "-------------------\n"
-        return label
+        label
     } else {
-        return "\n!! ${user.fullName} does not have a $type address set up !!\n"
+        "\n!! ${user.fullName} does not have a $type address set up !!\n"
     }
 }
 
-fun printLabelFor(user: User, type: AddressType) {
+@JvmOverloads
+fun printLabelFor(user: User, type: AddressType = AddressType.Shipping) {
     println(labelFor(user, type))
 }
