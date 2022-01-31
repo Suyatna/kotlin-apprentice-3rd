@@ -13,10 +13,10 @@ public class User {
         StringBuilder builder = new StringBuilder();
         for (Address address : addresses) {
             builder.append(
-                    address.getAddressType().name() + " address:\n"
+                    address.addressType.name() + " address:\n"
             );
             builder.append(
-                    LabelPrinter.labelFor(this, address.getAddressType())
+                    LabelPrinter.labelFor(this, address.addressType)
             );
         }
 
