@@ -8,8 +8,4 @@ public class User {
     public List<CreditCard> getCreditCards() {
         return creditCards;
     }
-
-    public void setCreditCards(List<CreditCard> creditCards) {
-        this.creditCards = creditCards;
-    }
 }
