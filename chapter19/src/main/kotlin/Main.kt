@@ -41,4 +41,8 @@ fun main() {
     println("Another User has ${anotherUser.addresses.count()} addresses")
 
     println("Another User first name: ${anotherUser.firstName ?: "(not set)"}")
+
+    println("Sample First Line: ${Address.sampleFirstLine}")
+
+    println("Sample Canadian Address:\n${Address.canadianSample(AddressType.Billing)}")
 }

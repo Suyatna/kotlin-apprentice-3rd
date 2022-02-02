@@ -33,6 +33,21 @@ data class Address @JvmOverloads constructor(
         const val country = "country"
     }
 
+    companion object {
+        const val sampleFirstLine = "123 Fake Street"
+
+        @JvmStatic
+        fun canadianSample(type: AddressType): Address {
+            return Address(sampleFirstLine,
+            "4th floor",
+            "Vancouver",
+            "BC",
+            "A3G 4B2",
+            type,
+            "Canada")
+        }
+    }
+
     override fun toString(): String {
         return forPostalLabel()
     }

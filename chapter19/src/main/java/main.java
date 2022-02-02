@@ -30,5 +30,10 @@ class JavaApplication {
         addressJSON.put(keys.addressType, address.addressType);
 
         System.out.println("Address JSON:\n" + addressJSON);
+
+        System.out.println("Sample first line of address: " + Address.sampleFirstLine);
+
+        Address canadian = Address.canadianSample(AddressType.Shipping);
+        System.out.println(canadian);
     }
 }
