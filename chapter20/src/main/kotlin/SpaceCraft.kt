@@ -1,3 +1,7 @@
+import exceptions.BrokenEngineException
+import exceptions.OutOfFuelException
+import exceptions.SpaceToEarthConnectionFailedException
+
 class SpaceCraft {
     private var isConnectionAvailable: Boolean = false
     private var isEngineInOrder: Boolean = false
@@ -6,21 +10,15 @@ class SpaceCraft {
 
     fun launch() {
         if (fuel < 5) {
-//            sendMessageToEarth("Out of fuel. Can't take off")
-            throw Exception("Out of fuel. Can't take off")
-            return
+            throw OutOfFuelException()
         }
 
         if (!isEngineInOrder) {
-//            sendMessageToEarth("The engine is broken. Can't take off")
-            throw Exception("The engine is broken. Can't take off")
-            return
+            throw BrokenEngineException()
         }
 
         if (!isConnectionAvailable) {
-//            sendMessageToEarth("No connection with Earth. Can't take off")
-            throw Exception("No connection with Earth. Can't take off")
-            return
+            throw SpaceToEarthConnectionFailedException()
         }
         // remaining launch code
 
@@ -33,5 +31,26 @@ class SpaceCraft {
 
     fun sendMessageToEarth(message: String) {
         println("Spacecraft to Earth: $message")
+    }
+
+    fun refuel() {
+        fuel += 5
+        sendMessageToEarth("The fuel tank is filled.")
+    }
+
+    fun repairEngine() {
+        isEngineInOrder = true
+        sendMessageToEarth("The engine is in order.")
+    }
+
+    fun fixConnection() {
+        isConnectionAvailable = true
+        sendMessageToEarth("Hello Earth! Can you hear me?")
+        sendMessageToEarth("Connection is established.")
+    }
+
+    fun land() {
+        sendMessageToEarth("Landing...")
+        isInSpace = false
     }
 }
