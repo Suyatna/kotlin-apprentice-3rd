@@ -5,14 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb79a6b8-dbfc-4132-937f-9a4cb7db9837" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/SpaceCraft.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/SpacePort.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/exceptions/BrokenEngineException.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/exceptions/OutOfFuelException.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/exceptions/SpaceToEarthConnectionFailedException.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/exceptions/SpaceCraftException.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/SpacePort.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/SpacePort.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/exceptions/BrokenEngineException.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/exceptions/BrokenEngineException.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/exceptions/OutOfFuelException.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/exceptions/OutOfFuelException.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/exceptions/SpaceToEarthConnectionFailedException.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/exceptions/SpaceToEarthConnectionFailedException.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +57,11 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
+  <component name="RecentsManager">
+    <key name="CreateKotlinClassDialog.RecentsKey">
+      <recent name="exceptions" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MainKt" />
@@ -80,7 +84,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1643893169993</updated>
-      <workItem from="1643893179022" duration="3362000" />
+      <workItem from="1643893179022" duration="5179000" />
     </task>
     <servers />
   </component>

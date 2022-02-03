@@ -1,5 +1,6 @@
 import exceptions.BrokenEngineException
 import exceptions.OutOfFuelException
+import exceptions.SpaceCraftException
 import exceptions.SpaceToEarthConnectionFailedException
 
 object SpacePort {
@@ -22,5 +23,14 @@ object SpacePort {
                 investigateSpace(spaceCraft)
             }
         }
+    }
+
+    fun testSetup(spaceCraft: SpaceCraft) = try {
+        spaceCraft.launch()
+        true
+    } catch (exception: SpaceCraftException) {
+        false
+    } finally {
+        spaceCraft.land()
     }
 }

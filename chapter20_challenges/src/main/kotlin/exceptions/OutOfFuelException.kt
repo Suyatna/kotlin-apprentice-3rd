@@ -1,3 +1,3 @@
 package exceptions
 
-class OutOfFuelException : Exception("Out of fuel. Can't take off")
+class OutOfFuelException : SpaceCraftException("Out of fuel. Can't take off")
