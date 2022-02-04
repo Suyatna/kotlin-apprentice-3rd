@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb79a6b8-dbfc-4132-937f-9a4cb7db9837" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/SpaceCraft.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/SpaceCraft.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/SpacePort.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/SpacePort.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +50,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
     <key name="CreateKotlinClassDialog.RecentsKey">
@@ -82,7 +80,7 @@
       <option name="presentableId" value="Default" />
       <updated>1643893169993</updated>
       <workItem from="1643893179022" duration="6344000" />
-      <workItem from="1643940414399" duration="291000" />
+      <workItem from="1643940414399" duration="1214000" />
     </task>
     <servers />
   </component>

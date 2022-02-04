@@ -1,3 +1,4 @@
+import exceptions.AliensAttackException
 import exceptions.SpaceCraftException
 
 object SpacePort {
@@ -7,6 +8,8 @@ object SpacePort {
         } catch (exception: SpaceCraftException) {
             spaceCraft.sendMessageToEarth(exception.localizedMessage)
             spaceCraft.overhaul()
+        } catch (exception: AliensAttackException) {
+            spaceCraft.sendMessageToEarth(exception.localizedMessage)
         } finally {
             if (spaceCraft.isInSpace) {
                 spaceCraft.land()
