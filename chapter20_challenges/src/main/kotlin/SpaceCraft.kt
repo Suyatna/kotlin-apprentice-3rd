@@ -28,17 +28,17 @@ class SpaceCraft {
         isInSpace = true
     }
 
-    fun refuel() {
+    private fun refuel() {
         fuel += 5
         sendMessageToEarth("The fuel tank is filled")
     }
 
-    fun repairEngine() {
+    private fun repairEngine() {
         isEngineInOrder = true
         sendMessageToEarth("The engine is in order")
     }
 
-    fun fixConnection() {
+    private fun fixConnection() {
         isConnectionAvailable = true
         sendMessageToEarth("Hello Earth! Can you hear me?")
         sendMessageToEarth("Connection is established")
@@ -47,6 +47,20 @@ class SpaceCraft {
     fun land() {
         sendMessageToEarth("Landing...")
         isInSpace = false
+    }
+
+    fun overhaul() {
+        if (fuel < 5) {
+            refuel()
+        }
+
+        if (!isEngineInOrder) {
+            repairEngine()
+        }
+
+        if (!isConnectionAvailable) {
+            fixConnection()
+        }
     }
 
     fun sendMessageToEarth(message: String) = println("Spacecraft to Earth: $message")

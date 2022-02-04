@@ -5,13 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb79a6b8-dbfc-4132-937f-9a4cb7db9837" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/exceptions/SpaceCraftException.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/SpaceCraft.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/SpaceCraft.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/SpacePort.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/SpacePort.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/exceptions/BrokenEngineException.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/exceptions/BrokenEngineException.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/exceptions/OutOfFuelException.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/exceptions/OutOfFuelException.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/exceptions/SpaceToEarthConnectionFailedException.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/exceptions/SpaceToEarthConnectionFailedException.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +81,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1643893169993</updated>
-      <workItem from="1643893179022" duration="5179000" />
+      <workItem from="1643893179022" duration="6344000" />
+      <workItem from="1643940414399" duration="291000" />
     </task>
     <servers />
   </component>
