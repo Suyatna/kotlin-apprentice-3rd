@@ -1,6 +1,6 @@
 import java.util.*
 
-class Robot(val name: String) {
+class Robot(private val name: String) {
     var strength: Int = 0
     var isAlive: Boolean = true
     private var health: Int = 100
@@ -10,8 +10,8 @@ class Robot(val name: String) {
         report("Create (strength: $strength)")
     }
 
-    private fun report(message: String) {
-        println("name:\t$message")
+    fun report(message: String) {
+        println("$name:\t$message")
     }
 
     private fun damage(damage: Int) {
