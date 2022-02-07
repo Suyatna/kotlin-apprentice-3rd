@@ -2,7 +2,7 @@ object Battlefield {
     fun beginBattle(
         firstRobot: Robot,
         secondRobot: Robot,
-        onBattleEnded: (Robot) -> Unit
+        onBattleEnded: Robot.() -> Unit
     ) {
 
         battle(firstRobot, secondRobot)

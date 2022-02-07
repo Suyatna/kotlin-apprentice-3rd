@@ -5,7 +5,7 @@ fun main() {
 //    Battlefield.beginBattle(firstRobot, secondRobot, ::onBattleEnded)
 
     Battlefield.beginBattle(firstRobot, secondRobot) {
-        it.report("Win!")
+        report("Win!")
     }
 }
 
