@@ -1,6 +1,6 @@
 import java.util.*
 
-class Robot(private val name: String) {
+class Robot(val name: String) {
     var strength: Int = 0
     var isAlive: Boolean = true
     private var health: Int = 100

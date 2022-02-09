@@ -1,8 +1,19 @@
 fun main() {
-    val firstRobot = Robot("Experimental Space Navigation Droid")
-    val secondRobot = Robot("Extra-Terrestrial Air Safety Droid")
+    val participants = arrayListOf(
+        Robot("Extra-Terrestrial Neutralize Bot"),
+        Robot("Generic Evasion Droid"),
+        Robot("Self-Reliant War Management Device"),
+        Robot("Advanced Nullification Android"),
+        Robot("Rational Network Defense Droid"),
+        Robot("Motorized Shepherd Cyborg"),
+        Robot("Reactive Algorithm Entity"),
+        Robot("Ultimate Safety Guard")
+    )
 
-    Battlefield.beginBattle(firstRobot, secondRobot, fun(robot) {
-        robot.report("Win!")
-    })
+    val topCategory = participants
+        .filter { it.strength > 80 }
+        .take(3)
+        .sortedBy { it.name }
+
+    println(topCategory)
 }
