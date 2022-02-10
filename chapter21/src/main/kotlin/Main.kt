@@ -9,11 +9,14 @@ fun main() {
         Robot("Reactive Algorithm Entity"),
         Robot("Ultimate Safety Guard")
     )
+    println()
 
     val topCategory = participants
         .filter { it.strength > 80 }
         .take(3)
         .sortedBy { it.name }
 
-    println(topCategory)
+    for (topParticipants in topCategory) {
+        println(topParticipants.name)
+    }
 }
