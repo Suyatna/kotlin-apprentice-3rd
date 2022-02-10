@@ -19,4 +19,11 @@ fun main() {
     for (topParticipants in topCategory) {
         println(topParticipants.name)
     }
+    println()
+
+    val factorial = generateSequence(1 to 1) {
+        it.first + 1 to it.second * (it.first + 1)
+    }
+
+    println(factorial.take(10).map { it.second }.last())
 }
