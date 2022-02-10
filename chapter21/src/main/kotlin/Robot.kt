@@ -31,7 +31,7 @@ class Robot(val name: String) {
         }
     }
 
-    fun attack(robot: Robot) {
+    infix fun attack(robot: Robot) {
         val damage = random.randomDamage(strength)
 
         robot.damage(damage)
