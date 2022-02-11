@@ -15,7 +15,27 @@ class Robot(private val name: String) {
     }
 
     private fun report(message: String) {
-
+        println("$name: \t$message")
     }
 
+    private fun damage(damage: Int) {
+        val blocked = random.randomBlock()
+
+        if (blocked) {
+            report("Blocked attack")
+            return
+        }
+
+        health -= damage
+        report("Damage -$damage, health $health")
+
+        if (health <= 0) {
+            isAlive = false
+        }
+    }
+
+    infix fun attack(robot: Robot) {
+        val damage = random.randomDamage(strength)
+        robot.damage(damage)
+    }
 }
