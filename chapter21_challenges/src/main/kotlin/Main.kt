@@ -41,4 +41,25 @@ fun main() {
             }
         }
     }
+    println()
+
+    /*
+    Challenge 2
+
+    Write a function to evaluate the first N elements of the `Fibonacci sequence` using memorization.
+    Each of the elements of the Fibonacci is equal to the sum of the two previous ones.
+    Start from 1, 1, 2, 3, ...
+     */
+
+    getNElementsOfFibonacci(15).forEach {
+        println(it)
+    }
+}
+
+fun getNElementsOfFibonacci(n: Int): Sequence<Int> {
+    val sequence = generateSequence(1 to 1) {
+        it.second to it.first + it.second
+    }.map { it.first }
+
+    return sequence.take(n)
 }
