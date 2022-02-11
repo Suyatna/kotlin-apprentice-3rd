@@ -5,7 +5,7 @@ object Battlefield {
         secondRobot: Robot,
         onBattleEnded: (Robot) -> Unit
     ) {
-        var winner: Robot? = null
+        var winner: Robot?
 
         battle(firstRobot, secondRobot)
 

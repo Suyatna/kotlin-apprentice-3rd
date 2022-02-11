@@ -14,7 +14,7 @@ class Robot(private val name: String) {
         report("Created (strength $strength)")
     }
 
-    private fun report(message: String) {
+    fun report(message: String) {
         println("$name: \t$message")
     }
 
