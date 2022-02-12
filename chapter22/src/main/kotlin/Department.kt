@@ -1,4 +1,4 @@
-class Department(val name: String) {
+class Department(val name: String) : Iterable<Employee> {
     val employees: ArrayList<Employee> = arrayListOf()
 
     operator fun plusAssign(employee: Employee) {
@@ -28,4 +28,6 @@ class Department(val name: String) {
     }
 
     operator fun contains(employee: Employee) = employees.contains(employee)
+
+    override fun iterator() = employees.iterator()
 }
