@@ -14,4 +14,14 @@ class Employee(
         println("$name's salary decreased to $$salary")
         return this
     }
+
+    operator fun plusAssign(increasingSalary: Int) {
+        salary += increasingSalary
+        println("$name got raised to $$salary")
+    }
+
+    operator fun minusAssign(decreaseSalary: Int) {
+        salary -= decreaseSalary
+        println("$name's salary decreased to $$salary")
+    }
 }
