@@ -1,7 +1,18 @@
-fun main(args: Array<String>) {
-    println("Hello World!")
+fun main() {
+    val company = Company("MyOwnCompany")
 
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
+    val developmentDepartment = Department("Development")
+    val qaDepartment = Department("Quality Assurance")
+    val hrDepartment = Department("Human Resources")
+
+    var Julia = Employee(company, "Julia", 100_000)
+    var John = Employee(company, "John", 86_000)
+    var Peter = Employee(company, "Peter", 100_000)
+
+    var Sandra = Employee(company, "Sandra", 75_000)
+    var Thomas = Employee(company, "Thomas", 73_000)
+    var Alice = Employee(company, "Alice", 70_000)
+
+    var Bernadette = Employee(company, "Bernadette", 66_000)
+    var Mark = Employee(company, "Mark", 66_000)
 }
