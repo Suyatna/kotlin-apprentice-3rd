@@ -38,4 +38,16 @@ fun main() {
 
     Mark += 2500
     Alice -= 2500
+
+    println()
+
+    val firstEmployee = qaDepartment[0]
+    firstEmployee
+    qaDepartment[0]?.plusAssign(1000)
+
+    qaDepartment[1] = Thomas
+
+    if (Thomas !in qaDepartment) {
+        println("${Thomas.name} no longer works here")
+    }
 }
