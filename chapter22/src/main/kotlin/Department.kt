@@ -1,4 +1,5 @@
-class Department(val name: String) : Iterable<Employee> {
+class Department(private val name: String) : Iterable<Employee> {
+
     val employees: ArrayList<Employee> = arrayListOf()
 
     operator fun plusAssign(employee: Employee) {

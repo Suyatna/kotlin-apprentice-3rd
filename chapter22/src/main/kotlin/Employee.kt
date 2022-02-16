@@ -3,6 +3,7 @@ data class Employee(
     val name: String,
     var salary: Int
 ) : Comparable<Employee> {
+
     operator fun inc(): Employee {
         salary += 5000
         println("$name got a raise to $$salary")

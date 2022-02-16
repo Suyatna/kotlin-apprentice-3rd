@@ -1,4 +1,4 @@
-class Company(val name: String) {
+class Company {
     private val departments: ArrayList<Department> = arrayListOf()
 
     val allEmployees: List<Employee>

@@ -1,51 +1,51 @@
 fun main() {
-    val company = Company("MyOwnCompany")
+    val company = Company()
 
     val developmentDepartment = Department("Development")
     val qaDepartment = Department("Quality Assurance")
     val hrDepartment = Department("Human Resources")
 
-    var Julia = Employee(company, "Julia", 100_000)
-    var John = Employee(company, "John", 86_000)
-    var Peter = Employee(company, "Peter", 100_000)
+    var julia = Employee(company, "Julia", 100_000)
+    val john = Employee(company, "John", 86_000)
+    var peter = Employee(company, "Peter", 100_000)
 
-    var Sandra = Employee(company, "Sandra", 75_000)
-    var Thomas = Employee(company, "Thomas", 73_000)
-    var Alice = Employee(company, "Alice", 70_000)
+    val sandra = Employee(company, "Sandra", 75_000)
+    val thomas = Employee(company, "Thomas", 73_000)
+    val alice = Employee(company, "Alice", 70_000)
 
-    var Bernadette = Employee(company, "Bernadette", 66_000)
-    var Mark = Employee(company, "Mark", 66_000)
+    val bernadette = Employee(company, "Bernadette", 66_000)
+    val mark = Employee(company, "Mark", 66_000)
 
     company += developmentDepartment
     company += qaDepartment
     company += hrDepartment
 
-    developmentDepartment += Julia
-    developmentDepartment += John
-    developmentDepartment += Peter
+    developmentDepartment += julia
+    developmentDepartment += john
+    developmentDepartment += peter
 
-    qaDepartment += Sandra
-    qaDepartment += Thomas
-    qaDepartment += Alice
+    qaDepartment += sandra
+    qaDepartment += thomas
+    qaDepartment += alice
 
-    hrDepartment += Bernadette
-    hrDepartment += Mark
+    hrDepartment += bernadette
+    hrDepartment += mark
 
-    qaDepartment -= Thomas
+    qaDepartment -= thomas
 
-    ++Julia // now Julia's salary is 105_000
-    --Peter // now Peter's salary is 95_000
+    ++julia // now Julia's salary is 105_000
+    --peter // now Peter's salary is 95_000
 
-    Mark += 2500
-    Alice -= 2500
+    mark += 2500
+    alice -= 2500
 
     println()
 
-    if (Thomas !in qaDepartment) {
-        println("${Thomas.name} no longer works here")
+    if (thomas !in qaDepartment) {
+        println("${thomas.name} no longer works here")
     }
 
     println()
 
-    print((Alice..Mark).joinToString { it.name })
+    print((alice..mark).joinToString { it.name })
 }
