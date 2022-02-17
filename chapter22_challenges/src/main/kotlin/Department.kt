@@ -2,6 +2,14 @@ class Department(val name: String) : Iterable<Employee> {
 
     val employees: ArrayList<Employee> = arrayListOf()
 
+    fun hire(newEmployees: List<Employee>) {
+        employees.addAll(newEmployees)
+
+        newEmployees.forEach {
+            println("${it.name} hired to $name department")
+        }
+    }
+
     operator fun plusAssign(employee: Employee) {
         employees.add(employee)
         println("${employee.name} hired to $name department")

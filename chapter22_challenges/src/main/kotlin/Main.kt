@@ -20,16 +20,11 @@ fun main() {
     company += qaDepartment
     company += hrDepartment
 
-    developmentDepartment += julia
-    developmentDepartment += john
-    developmentDepartment += peter
+    developmentDepartment.hire(julia + john + peter)
 
-    qaDepartment += sandra
-    qaDepartment += thomas
-    qaDepartment += alice
+    qaDepartment.hire(sandra + thomas + alice)
 
-    hrDepartment += bernadette
-    hrDepartment += mark
+    hrDepartment.hire(bernadette + mark)
 
     qaDepartment -= thomas
 
