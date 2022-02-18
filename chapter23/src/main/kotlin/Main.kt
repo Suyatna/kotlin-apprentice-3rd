@@ -1,7 +1,15 @@
-fun main(args: Array<String>) {
-    println("Hello World!")
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
+fun main() = runBlocking {
+    launch(Dispatchers.Default) {
+        (0..10).forEach {
+            println("Message #$it from the ${Thread.currentThread().name}")
+        }
+    }
+
+    (0..10).forEach {
+        println("Message #$it from the ${Thread.currentThread().name}")
+    }
 }
