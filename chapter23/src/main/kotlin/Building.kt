@@ -35,6 +35,6 @@ class Building(val name: String) {
         speakThroughBullhorn("The $floor'th is furnished")
     }
 
-    private fun speakThroughBullhorn(message: String) = println(message)
+    fun speakThroughBullhorn(message: String) = println(message)
 
 }
