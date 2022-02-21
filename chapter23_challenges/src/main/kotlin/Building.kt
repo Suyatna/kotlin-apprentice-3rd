@@ -1,21 +1,31 @@
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import java.util.*
 
 class Building(
     val name: String,
-    var floors: Int = 0,
+    private var floors: Int = 0,
     private val scope: CoroutineScope
 ) {
+
+    private val random = Random()
 
     suspend fun makeFoundation() = scope.launch {
         delay(300)
         speakThroughBullhorn("[${Thread.currentThread().name}] The foundation is ready")
     }
 
-    suspend fun buildFloor(floor: Int) = scope.launch {
+    suspend fun buildFloor(floor: Int) = withContext(scope.coroutineContext) {
         delay(100)
-        speakThroughBullhorn("[${Thread.currentThread().name}] Floor number $floor floor is built")
+
+        if (random.nextBoolean()) {
+            throw Exception("[${Thread.currentThread().name}] Something went wrong on the $floor'th floor")
+        }
+
+        speakThroughBullhorn("[${Thread.currentThread().name}] The $floor'th floor is raised")
+        ++floors
     }
 
     suspend fun placeWindows(floor: Int) = scope.launch {
